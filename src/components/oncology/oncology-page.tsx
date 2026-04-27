@@ -50,6 +50,15 @@ const navItems = [
   { label: "Contact", href: "#cta" },
 ];
 
+export type Facility = {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+  bento: string;
+};
+
 const introParagraphs = [
   "Shifa Oncology is engineered around precision and compassion. Every case is discussed through multidisciplinary pathways so patients receive faster, clearer decisions.",
   "Our teams combine medical, radiation, and surgical oncology with diagnostics and supportive care in one coordinated environment.",

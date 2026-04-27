@@ -15,7 +15,7 @@ interface FacilityCardProps {
 }
 
 const FacilityCard: React.FC<FacilityCardProps> = ({ facility, className, onClick, featured, wide }) => {
-  const { icon: Icon, title, short, detail, image } = facility;
+  const { icon: Icon, title, text, image } = facility;
 
   return (
     <button
@@ -58,11 +58,10 @@ const FacilityCard: React.FC<FacilityCardProps> = ({ facility, className, onClic
         </div>
 
         <h3 className={cn("font-bold text-slate-900 transition-colors duration-300 group-hover:text-[#1E88E5]", featured ? "text-3xl" : "text-xl")}>{title}</h3>
-        <p className={cn("mt-1.5 font-semibold text-[#1E88E5]", featured ? "text-lg" : "text-sm")}>{short}</p>
-        
+
         <div className={cn("mt-3 leading-relaxed text-slate-500", featured ? "text-base" : "text-sm")}>
           <p className="line-clamp-2">
-            {detail}
+            {text}
           </p>
         </div>
 
