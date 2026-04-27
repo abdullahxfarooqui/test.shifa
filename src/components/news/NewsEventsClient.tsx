@@ -47,7 +47,7 @@ export function NewsEventsClient({ categories }: NewsEventsClientProps) {
   const categoryOptions = useMemo(() => {
     const listedCategories = new Set(data.items.map((item) => item.category));
     const options = categories
-      .filter((entry) => listedCategories.has(entry.slug))
+      .filter((entry) => listedCategories.has(entry.slug as ArticleCategory))
       .map((entry) => ({ value: entry.slug, label: entry.label }));
 
     if (category && !options.some((option) => option.value === category)) {
