@@ -321,7 +321,7 @@ export function HomePage() {
               <Button asChild className="bg-[#0b5fa5] hover:bg-[#0a4f8b]">
                 <Link href={program.cta.href}>{program.cta.label}</Link>
               </Button>
-              <Button asChild variant="outline">
+              <Button asChild variant="secondary" className="border border-slate-300 bg-white text-slate-900 hover:bg-slate-50">
                 <Link href="/contact-us">Talk to Care Team</Link>
               </Button>
             </div>
