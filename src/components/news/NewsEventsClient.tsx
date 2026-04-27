@@ -45,9 +45,18 @@ export function NewsEventsClient({ categories }: NewsEventsClientProps) {
   const remainingArticles = data.items.slice(1);
 
   const categoryOptions = useMemo(() => {
+    const isValidArticleCategory = (value: string): value is ArticleCategory => {
+      const validCategories: ArticleCategory[] = [
+        "cardiology", "neurology", "oncology", "orthopaedics", "paediatrics",
+        "womens-health", "diabetes", "nutrition", "mental-health", "first-aid",
+        "diagnosis", "symptoms", "elderly-care", "general"
+      ];
+      return validCategories.includes(value as ArticleCategory);
+    };
+
     const listedCategories = new Set(data.items.map((item) => item.category));
     const options = categories
-      .filter((entry) => listedCategories.has(entry.slug as ArticleCategory))
+      .filter((entry) => isValidArticleCategory(entry.slug) && listedCategories.has(entry.slug))
       .map((entry) => ({ value: entry.slug, label: entry.label }));
 
     if (category && !options.some((option) => option.value === category)) {
@@ -70,8 +79,8 @@ export function NewsEventsClient({ categories }: NewsEventsClientProps) {
       label: labelMap[value] ?? value.toUpperCase(),
     }));
 
-    if (lang && !options.some((option) => option.value === lang)) {
-      options.unshift({ value: lang as "en" | "ur", label: labelMap[lang] ?? lang.toUpperCase() });
+    if (lang && (lang === "en" || lang === "ur")) {
+      options.unshift({ value: lang, label: labelMap[lang] });
     }
 
     return [{ value: "", label: "All" }, ...options];

@@ -142,7 +142,7 @@ const diagnostics = [
     image:
       "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "Genetic counseling consultation for hereditary cancer risk",
-    category: "Genetic" as DiagnosticCategory,
+    category: "Genetic" satisfies DiagnosticCategory,
   },
   {
     icon: UserRound,
@@ -316,9 +316,9 @@ const stagger = {
 };
 
 type OutcomeDataset = {
-  recoveryTrend: Array<{ period: string; value: number }>;
-  successRates: Array<{ name: string; value: number }>;
-  caseDistribution: Array<{ name: string; value: number; color: string }>;
+  recoveryTrend: readonly { period: string; value: number }[];
+  successRates: readonly { name: string; value: number }[];
+  caseDistribution: readonly { name: string; value: number; color: string }[];
 };
 
 export function OncologyPage() {
@@ -690,25 +690,28 @@ export function OncologyPage() {
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#0B5FA5]">Dataset View</p>
                 <div className="inline-flex rounded-full border border-blue-100 bg-white/90 p-1 shadow-sm">
-                  {(Object.keys(outcomeDatasets) as Array<keyof typeof outcomeDatasets>).map((key) => (
-                    <button
-                      key={key}
-                      type="button"
-                      onClick={() => setActiveOutcomeDataset(key)}
-                      className={cn(
-                        "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 ease-in-out",
-                        activeOutcomeDataset === key
-                          ? "bg-[#1E88E5] text-white"
-                          : "text-[#0B5FA5] hover:scale-[1.02] hover:shadow-sm",
-                      )}
-                    >
-                      {outcomeDatasets[key].label}
-                    </button>
-                  ))}
+                  {Object.keys(outcomeDatasets).map((key) => {
+                    const typedKey = key as keyof typeof outcomeDatasets;
+                    return (
+                      <button
+                        key={key}
+                        type="button"
+                        onClick={() => setActiveOutcomeDataset(typedKey)}
+                        className={cn(
+                          "rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 ease-in-out",
+                          activeOutcomeDataset === typedKey
+                            ? "bg-[#1E88E5] text-white"
+                            : "text-[#0B5FA5] hover:scale-[1.02] hover:shadow-sm",
+                        )}
+                      >
+                        {outcomeDatasets[typedKey].label}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
-                <ClinicalOutcomesCharts selectedOutcome={selectedOutcome as OutcomeDataset} />
+                <ClinicalOutcomesCharts selectedOutcome={selectedOutcome} />
             </motion.div>
           </div>
         </section>

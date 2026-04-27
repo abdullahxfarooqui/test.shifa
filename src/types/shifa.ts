@@ -171,7 +171,7 @@ export type FormField = {
   label: string;
   required?: boolean;
   placeholder?: string;
-  options?: string[];
+  options?: FieldOption[];
 };
 
 /** Filter bar field configuration */
