@@ -26,7 +26,7 @@ type ArticleChartInnerProps = {
 const PIE_COLORS = ["#0B5FA5", "#E53935", "#22C55E", "#F59E0B", "#8B5CF6", "#06B6D4", "#64748B"];
 
 export default function ArticleChartInner({ chart }: ArticleChartInnerProps) {
-  const formatValue = (value: number | null | undefined): ReactNode => {
+  const formatValue = (value: any): ReactNode => {
     if (value === null || value === undefined) return "";
     return `${value}${chart.unit ? ` ${chart.unit}` : ""}`;
   };

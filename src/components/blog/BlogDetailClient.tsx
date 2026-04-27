@@ -361,7 +361,10 @@ function ArticleChart({ enhancement }: { enhancement: ArticleEnhancement }) {
                   border: "1px solid #E4E2DC",
                   borderRadius: "8px",
                 }}
-                formatter={(value: number | null | undefined): ReactNode => [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel]}
+                formatter={(value: any): ReactNode => {
+                  if (value === null || value === undefined) return "";
+                  return [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel];
+                }}
               />
               <Legend />
               <Line
@@ -386,7 +389,10 @@ function ArticleChart({ enhancement }: { enhancement: ArticleEnhancement }) {
                   border: "1px solid #E4E2DC",
                   borderRadius: "8px",
                 }}
-                formatter={(value: number | null | undefined): ReactNode => [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel]}
+                formatter={(value: any): ReactNode => {
+                  if (value === null || value === undefined) return "";
+                  return [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel];
+                }}
               />
               <Legend />
               <Bar dataKey="value" fill="#C8102E" name={chart.legendLabel} radius={[8, 8, 0, 0]} />
@@ -408,7 +414,10 @@ function ArticleChart({ enhancement }: { enhancement: ArticleEnhancement }) {
                   border: "1px solid #E4E2DC",
                   borderRadius: "8px",
                 }}
-                formatter={(value: number | null | undefined): ReactNode => [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel]}
+                formatter={(value: any): ReactNode => {
+                  if (value === null || value === undefined) return "";
+                  return [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel];
+                }}
               />
               <Bar dataKey="value" fill="#C8102E" name={chart.legendLabel} radius={[0, 8, 8, 0]} />
             </BarChart>
