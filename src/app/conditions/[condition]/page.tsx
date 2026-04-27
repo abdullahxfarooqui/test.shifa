@@ -9,6 +9,8 @@ import {
   getSpecialtyBySlug,
   specialties,
 } from "@/lib/medical-data";
+import type { MedicalConditionSchema, FAQSchema } from "@/lib/schema-types";
+import { stringifySchema } from "@/lib/schema-types";
 
 type ConditionPageProps = {
   params: Promise<{
@@ -63,7 +65,7 @@ export default async function ConditionPage({ params }: ConditionPageProps) {
   const relatedSpecialty = getSpecialtyBySlug(item.relatedSpecialtySlug);
   const relatedDoctors = doctors.filter((doctor) => item.relatedDoctorSlugs.includes(doctor.slug));
 
-  const medicalConditionSchema = {
+  const medicalConditionSchema: MedicalConditionSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalCondition",
     name: item.name,
@@ -77,7 +79,7 @@ export default async function ConditionPage({ params }: ConditionPageProps) {
       : undefined,
   };
 
-  const faqSchema = {
+  const faqSchema: FAQSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: item.faqs.map((faq) => ({
@@ -94,11 +96,11 @@ export default async function ConditionPage({ params }: ConditionPageProps) {
     <main className="bg-[var(--brand-bg)] pb-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalConditionSchema).replace(/</g, "\\u003c") }}
+        dangerouslySetInnerHTML={{ __html: stringifySchema(medicalConditionSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c") }}
+        dangerouslySetInnerHTML={{ __html: stringifySchema(faqSchema) }}
       />
 
       <section className="mx-auto max-w-[980px] px-4 pt-16 lg:px-6">

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { HomePage } from "@/components/home/home-page";
+import type { SiteGraphSchema } from "@/lib/schema-types";
+import { stringifySchema } from "@/lib/schema-types";
 
 const description =
   "Shifa International Hospitals delivers trusted tertiary care in Pakistan with JCI-accredited quality, 45+ specialties, and expert consultants in Islamabad and Faisalabad.";
@@ -37,7 +39,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const siteGraphSchema = {
+  const siteGraphSchema: SiteGraphSchema = {
     "@context": "https://schema.org",
     "@graph": [
       {
@@ -76,7 +78,7 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(siteGraphSchema).replace(/</g, "\\u003c"),
+          __html: stringifySchema(siteGraphSchema),
         }}
       />
       <HomePage />

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { conditions, doctors, getDoctorBySlug, getSpecialtyBySlug } from "@/lib/medical-data";
+import type { PhysicianSchema } from "@/lib/schema-types";
+import { stringifySchema } from "@/lib/schema-types";
 
 type DoctorPageProps = {
   params: Promise<{
@@ -60,7 +62,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
   const specialty = getSpecialtyBySlug(item.departmentSlug);
   const relatedConditions = conditions.filter((condition) => condition.relatedDoctorSlugs.includes(item.slug));
 
-  const physicianSchema = {
+  const physicianSchema: PhysicianSchema = {
     "@context": "https://schema.org",
     "@type": "Physician",
     name: item.name,
@@ -81,7 +83,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
     <main className="bg-[var(--brand-bg)] pb-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianSchema).replace(/</g, "\\u003c") }}
+        dangerouslySetInnerHTML={{ __html: stringifySchema(physicianSchema) }}
       />
 
       <section className="mx-auto max-w-[1080px] px-4 pt-16 lg:px-6">
