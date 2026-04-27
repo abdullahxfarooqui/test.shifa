@@ -14,12 +14,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-
-type OutcomeDataset = {
-  recoveryTrend: Array<{ period: string; value: number }>;
-  successRates: Array<{ name: string; value: number }>;
-  caseDistribution: Array<{ name: string; value: number; color: string }>;
-};
+import type { OutcomeDataset } from "@/types/shifa";
 
 export default function ClinicalOutcomesCharts({
   selectedOutcome,

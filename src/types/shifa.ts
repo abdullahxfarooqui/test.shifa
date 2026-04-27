@@ -248,3 +248,15 @@ export type ChartDataPoint = {
   name: string;
   value: number;
 };
+
+// ============================================================================
+// CLINICAL OUTCOMES TYPES
+// ============================================================================
+
+/** Immutable-first: all arrays are readonly to match `as const` data declarations */
+export type OutcomeDataset = {
+  readonly label?: string;
+  readonly recoveryTrend: readonly { readonly period: string; readonly value: number }[];
+  readonly successRates: readonly { readonly name: string; readonly value: number }[];
+  readonly caseDistribution: readonly { readonly name: string; readonly value: number; readonly color: string }[];
+};

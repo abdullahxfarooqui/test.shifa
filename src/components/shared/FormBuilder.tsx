@@ -8,11 +8,13 @@ import type { FormField } from "@/types/shifa";
 type FormBuilderProps = {
   fields: FormField[];
   submitLabel: string;
-  onSubmit: (values: Record<string, string>) => Promise<void>;
+  onSubmit?: (values: Record<string, string>) => Promise<void>;
+  /** When set, opens this URL in a new tab on submit instead of calling onSubmit */
+  redirectUrl?: string;
   className?: string;
 };
 
-export function FormBuilder({ fields, submitLabel, onSubmit, className }: FormBuilderProps) {
+export function FormBuilder({ fields, submitLabel, onSubmit, redirectUrl, className }: FormBuilderProps) {
   const [values, setValues] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
@@ -23,10 +25,14 @@ export function FormBuilder({ fields, submitLabel, onSubmit, className }: FormBu
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (redirectUrl) {
+      window.open(redirectUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
     setSubmitting(true);
     setMessage(null);
     try {
-      await onSubmit(values);
+      await onSubmit?.(values);
       setMessage("Submitted successfully.");
       setValues({});
     } catch {
@@ -50,11 +56,15 @@ export function FormBuilder({ fields, submitLabel, onSubmit, className }: FormBu
                 className="h-10 rounded-lg border border-slate-300 px-3 text-sm"
               >
                 <option value="">Select</option>
-                {(field.options ?? []).map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
+                {(field.options ?? []).map((option) => {
+                  const val = typeof option === "string" ? option : option.value;
+                  const lbl = typeof option === "string" ? option : option.label;
+                  return (
+                    <option key={val} value={val}>
+                      {lbl}
+                    </option>
+                  );
+                })}
               </select>
             ) : field.type === "textarea" ? (
               <textarea

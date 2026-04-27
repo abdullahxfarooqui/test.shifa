@@ -8,7 +8,8 @@ import { ArrowRight, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { doctors } from "@/lib/medical-data";
-import { getSpecialtyListingData, type ListingCategory } from "@/lib/specialty-listing";
+import { getSpecialtyListingData } from "@/lib/specialty-listing";
+import type { ListingCategory } from "@/types/shifa";
 import { cn } from "@/lib/utils";
 
 const filters: Array<"All" | ListingCategory> = ["All", "Surgical", "Medical", "Diagnostic", "Critical Care"];

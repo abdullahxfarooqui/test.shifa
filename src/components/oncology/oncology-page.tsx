@@ -22,7 +22,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import type { Facility, DiagnosticCategory } from "@/types/shifa";
+import type { Facility, DiagnosticCategory, OutcomeDataset } from "@/types/shifa";
 
 const ClinicalOutcomesCharts = dynamic(
   () => import("@/components/oncology/clinical-outcomes-charts"),
@@ -313,12 +313,6 @@ const fadeUp = {
 const stagger = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.08 } },
-};
-
-type OutcomeDataset = {
-  recoveryTrend: readonly { period: string; value: number }[];
-  successRates: readonly { name: string; value: number }[];
-  caseDistribution: readonly { name: string; value: number; color: string }[];
 };
 
 export function OncologyPage() {

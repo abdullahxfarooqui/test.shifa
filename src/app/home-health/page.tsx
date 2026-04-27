@@ -51,9 +51,7 @@ export default function HomeHealthPage() {
             { name: "preferredDate", type: "date", label: "Preferred Date", required: true },
           ]}
           submitLabel="Continue to eShifa"
-          onSubmit={async () => {
-            window.open("https://eshifa.org", "_blank", "noopener,noreferrer");
-          }}
+          redirectUrl="https://eshifa.org"
         />
       </SectionWrapper>
       <ContactBand phone="051-111-111-567" whatsapp="https://wa.me/925111111567" extra="24/7 eShifa" />

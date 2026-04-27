@@ -78,9 +78,6 @@ export default function CorporatePage() {
             { name: "message", type: "textarea", label: "Additional Requirements" },
           ]}
           submitLabel="Request Corporate Quote"
-          onSubmit={async () => {
-            return Promise.resolve();
-          }}
         />
       </SectionWrapper>
     </main>

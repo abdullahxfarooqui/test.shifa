@@ -41,9 +41,7 @@ export default function PatientPortalPage() {
             { name: "password", label: "Password", type: "password", required: true },
           ]}
           submitLabel="Continue to Portal"
-          onSubmit={async () => {
-            window.open("https://patientportal.shifa.com.pk", "_blank", "noopener,noreferrer");
-          }}
+          redirectUrl="https://patientportal.shifa.com.pk"
         />
       </SectionWrapper>
       <ContactBand phone="051-8464646" whatsapp="https://wa.me/92518464646" extra="Emergency: 051-846-4646" />
