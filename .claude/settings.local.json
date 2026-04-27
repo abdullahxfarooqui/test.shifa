@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(/Users/abdullahfarooqui/test.shifa/node_modules/.bin/tsc --noEmit)",
+      "WebFetch(domain:www.shifa.com.pk)",
+      "WebFetch(domain:shifaglobal.uk)",
+      "WebFetch(domain:eshifa.org)",
+      "WebFetch(domain:careers.shifa.com.pk)",
+      "WebFetch(domain:shifanews.com)",
+      "WebFetch(domain:patientportal.shifa.com.pk)"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+<svg width="640" height="180" viewBox="0 0 640 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="180" rx="90" fill="#F4F7FA"/>
+  <circle cx="88" cy="90" r="74" fill="#0EA5DF" stroke="#F91824" stroke-width="14"/>
+  <path d="M38 72C58 86 118 88 138 72" stroke="white" stroke-width="4"/>
+  <path d="M34 93C56 108 120 110 142 93" stroke="white" stroke-width="4"/>
+  <path d="M38 114C58 128 118 130 138 114" stroke="white" stroke-width="4"/>
+  <path d="M44 51C61 62 114 64 132 51" stroke="white" stroke-width="4"/>
+  <path d="M44 135C61 146 114 148 132 135" stroke="white" stroke-width="4"/>
+
+  <text x="190" y="82" fill="#0B0B0B" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="700">Shifa</text>
+  <text x="190" y="120" fill="#0B0B0B" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">International</text>
+  <text x="190" y="154" fill="#0B0B0B" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Hospitals Ltd.</text>
+
+  <line x1="450" y1="30" x2="450" y2="150" stroke="#111827" stroke-width="5"/>
+
+  <circle cx="535" cy="90" r="66" fill="url(#gold)" stroke="#C99C23" stroke-width="8"/>
+  <path d="M500 105L520 84H544M520 120L542 99H568" stroke="#1F2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="gold" x1="469" y1="24" x2="600" y2="156" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="0.55" stop-color="#F4D03F"/>
+      <stop offset="1" stop-color="#D8A82E"/>
+    </linearGradient>
+  </defs>
+</svg>
