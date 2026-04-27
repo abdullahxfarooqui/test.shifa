@@ -1,11 +1,7 @@
 import { Activity, HeartPulse, Hospital, ShieldPlus, Siren, Waves } from "lucide-react";
 
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-
-type FacilityItem = {
-  title: string;
-  description: string;
-};
+import type { FacilityItem } from "@/types/shifa";
 
 type FacilitiesGridProps = {
   specialtyName: string;

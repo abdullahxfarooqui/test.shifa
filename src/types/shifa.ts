@@ -1,3 +1,10 @@
+import type { ReactNode } from "react";
+import type { Transition } from "framer-motion";
+
+// ============================================================================
+// CORE DOMAIN TYPES
+// ============================================================================
+
 export type DoctorRecord = {
   id: string;
   slug: string;
@@ -17,6 +24,11 @@ export type DoctorRecord = {
   procedures: string[];
 };
 
+// ============================================================================
+// CATEGORY TYPES (Unified Taxonomy)
+// ============================================================================
+
+/** Article/Blog content categories */
 export type ArticleCategory =
   | "cardiology"
   | "neurology"
@@ -33,11 +45,22 @@ export type ArticleCategory =
   | "elderly-care"
   | "general";
 
+/** Specialty/Service categories */
+export type SpecialtyCategory = "Surgical" | "Medical" | "Diagnostic" | "Critical Care";
+
+/** Oncology diagnostic categories */
+export type DiagnosticCategory = "All" | "Screening" | "Imaging" | "Lab" | "Genetic";
+
+/** News/Events category structure with metadata */
 export type NewsCategory = {
   slug: string;
   label: string;
   urduLabel?: string;
 };
+
+// ============================================================================
+// CONTENT TYPES
+// ============================================================================
 
 export type Article = {
   id: string;
@@ -79,6 +102,39 @@ export type JobPosting = {
   applyUrl: string;
 };
 
+// ============================================================================
+// SPECIALTY/SERVICE TYPES
+// ============================================================================
+
+export type ListingSpecialty = {
+  slug: string;
+  title: string;
+  description: string;
+  category: SpecialtyCategory;
+  image: string;
+  alt: string;
+};
+
+/** Generic facility information for specialty pages */
+export type FacilityItem = {
+  title: string;
+  description: string;
+};
+
+/** Oncology facility with enhanced metadata */
+export type Facility = {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  text: string;
+  image: string;
+  alt: string;
+  bento: string; // Grid layout CSS classes
+};
+
+// ============================================================================
+// FORM & UI TYPES
+// ============================================================================
+
 export type AppointmentForm = {
   patientName: string;
   phone: string;
@@ -113,6 +169,14 @@ export type FormField = {
   required?: boolean;
   placeholder?: string;
   options?: string[];
+};
+
+/** Filter bar field configuration */
+export type FilterField = {
+  id: string;
+  label: string;
+  type: "select" | "text";
+  options?: FieldOption[];
 };
 
 export type HeroCta = {
@@ -161,4 +225,23 @@ export type ServiceItem = {
   description: string;
   icon?: string;
   availability?: string;
+};
+
+// ============================================================================
+// ANIMATION & LIBRARY INTEGRATION TYPES
+// ============================================================================
+
+/** Framer Motion variant with proper typing */
+export type AnimationVariant = {
+  hidden: Record<string, number | string>;
+  visible: Record<string, number | string | { staggerChildren?: number; transition?: Transition }>;
+};
+
+/** Recharts Tooltip formatter with proper generic typing */
+export type ChartFormatterFn = (value: number | null) => [string, string];
+
+/** Chart data point structure */
+export type ChartDataPoint = {
+  name: string;
+  value: number;
 };

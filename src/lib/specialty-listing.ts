@@ -1,16 +1,6 @@
 import { specialties as legacySpecialties } from "@/lib/medical-data";
 import { specialtyPageConfig } from "@/lib/specialty-page-config";
-
-export type ListingCategory = "Surgical" | "Medical" | "Diagnostic" | "Critical Care";
-
-export type ListingSpecialty = {
-  slug: string;
-  title: string;
-  description: string;
-  category: ListingCategory;
-  image: string;
-  alt: string;
-};
+import type { ListingCategory, ListingSpecialty } from "@/types/shifa";
 
 const fallbackImages: Record<ListingCategory, { image: string; alt: string }> = {
   Medical: {

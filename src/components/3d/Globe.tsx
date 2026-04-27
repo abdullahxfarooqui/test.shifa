@@ -149,8 +149,9 @@ function DottedGlobe({ target }: { target: GeoPoint }) {
       const s = 0.2 + p * 1.9;
       ringOneRef.current.scale.setScalar(s);
       ringOneRef.current.children.forEach((child) => {
-        const mesh = child as unknown as { material?: { opacity?: number } };
-        if (mesh.material) mesh.material.opacity = Math.max(0, 0.65 - p * 0.65);
+        if ("material" in child && child.material && "opacity" in child.material) {
+          (child.material as { opacity: number }).opacity = Math.max(0, 0.65 - p * 0.65);
+        }
       });
     }
 
@@ -159,8 +160,9 @@ function DottedGlobe({ target }: { target: GeoPoint }) {
       const s = 0.2 + p * 1.9;
       ringTwoRef.current.scale.setScalar(s);
       ringTwoRef.current.children.forEach((child) => {
-        const mesh = child as unknown as { material?: { opacity?: number } };
-        if (mesh.material) mesh.material.opacity = Math.max(0, 0.65 - p * 0.65);
+        if ("material" in child && child.material && "opacity" in child.material) {
+          (child.material as { opacity: number }).opacity = Math.max(0, 0.65 - p * 0.65);
+        }
       });
     }
   });

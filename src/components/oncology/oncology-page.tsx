@@ -22,6 +22,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import type { Facility, DiagnosticCategory } from "@/types/shifa";
 
 const ClinicalOutcomesCharts = dynamic(
   () => import("@/components/oncology/clinical-outcomes-charts"),
@@ -49,15 +50,6 @@ const navItems = [
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#cta" },
 ];
-
-export type Facility = {
-  icon: React.ComponentType<{ className?: string }>;
-  title: string;
-  text: string;
-  image: string;
-  alt: string;
-  bento: string;
-};
 
 const introParagraphs = [
   "Shifa Oncology is engineered around precision and compassion. Every case is discussed through multidisciplinary pathways so patients receive faster, clearer decisions.",
@@ -113,8 +105,6 @@ const facilities = [
   },
 ];
 
-type DiagnosticCategory = "All" | "Screening" | "Imaging" | "Lab" | "Genetic";
-
 const diagnosticFilters: DiagnosticCategory[] = ["All", "Screening", "Imaging", "Lab", "Genetic"];
 
 const diagnostics = [
@@ -125,7 +115,7 @@ const diagnostics = [
     image:
       "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "PET-CT scanner used for oncology staging and monitoring",
-    category: "Imaging" as DiagnosticCategory,
+    category: "Imaging" satisfies DiagnosticCategory,
   },
   {
     icon: Microscope,
@@ -134,7 +124,7 @@ const diagnostics = [
     image:
       "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "Pathology microscope and slides for tumor tissue analysis",
-    category: "Lab" as DiagnosticCategory,
+    category: "Lab" satisfies DiagnosticCategory,
   },
   {
     icon: FlaskConical,
@@ -143,7 +133,7 @@ const diagnostics = [
     image:
       "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "Molecular diagnostics lab for oncology biomarker testing",
-    category: "Lab" as DiagnosticCategory,
+    category: "Lab" satisfies DiagnosticCategory,
   },
   {
     icon: Dna,
