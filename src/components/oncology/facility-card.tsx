@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import type { Facility } from "@/components/oncology/oncology-page";
+import type { Facility } from "@/types/shifa";
 import { ChevronRight } from "lucide-react";
 
 interface FacilityCardProps {
