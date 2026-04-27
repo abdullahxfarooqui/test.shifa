@@ -9,7 +9,7 @@ import { StepProcess } from "@/components/shared/StepProcess";
 import { homeHealthHero, homeHealthSeo, homeHealthServices } from "@/data/shifa-pages";
 
 export const metadata: Metadata = {
-  title: homeHealthSeo.title,
+  title: { absolute: homeHealthSeo.title },
   description: homeHealthSeo.description,
   keywords: homeHealthSeo.keywords,
   alternates: { canonical: homeHealthSeo.canonical },

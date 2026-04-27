@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: DoctorPageProps): Promise<Met
   }
 
   return {
-    title: `${item.specialty} in Islamabad | ${item.name} | Shifa International`,
+    title: { absolute: `${item.specialty} in Islamabad | ${item.name} | Shifa International Hospitals` },
     description: item.summary,
     alternates: {
       canonical: `/doctors/${item.slug}`,

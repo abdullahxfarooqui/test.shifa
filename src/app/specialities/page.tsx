@@ -5,7 +5,7 @@ const description =
   "Explore 45+ medical specialties at Shifa International Hospitals with expert consultants, advanced diagnostics, and coordinated treatment pathways in Pakistan.";
 
 export const metadata: Metadata = {
-  title: "Specialities | Shifa International Hospitals",
+  title: { absolute: "Medical Specialties in Islamabad | 45+ Departments | Shifa International Hospitals" },
   description,
   alternates: {
     canonical: "/specialities",

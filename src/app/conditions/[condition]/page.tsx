@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: ConditionPageProps): Promise<
   }
 
   return {
-    title: item.seoTitle,
+    title: { absolute: item.seoTitle },
     description: item.description,
     alternates: {
       canonical: `/conditions/${item.slug}`,

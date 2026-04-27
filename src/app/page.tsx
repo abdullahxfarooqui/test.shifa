@@ -7,7 +7,7 @@ const description =
   "Shifa International Hospitals: JCI-accredited care, 45+ specialties, and expert consultants in Islamabad and Faisalabad.";
 
 export const metadata: Metadata = {
-  title: "Shifa International Hospitals | Healthcare in Pakistan",
+  title: { absolute: "Shifa International Hospitals | Healthcare in Pakistan" },
   description,
   alternates: {
     canonical: "/",
@@ -43,7 +43,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "MedicalOrganization",
+        "@type": "Hospital",
         "@id": "https://www.shifa.com.pk/#organization",
         name: "Shifa International Hospitals",
         url: "https://www.shifa.com.pk",

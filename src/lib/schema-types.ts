@@ -47,7 +47,7 @@ export interface PhysicianSchema extends SchemaBase {
 }
 
 export interface MedicalOrganizationSchema {
-  "@type": "MedicalOrganization";
+  "@type": "MedicalOrganization" | "Hospital";
   "@id": string;
   name: string;
   url: string;

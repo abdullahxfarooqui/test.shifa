@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: SpecialtyPageProps): Promise<
   }
 
   return {
-    title: `${specialty.name} | Shifa International Hospitals`,
+    title: { absolute: `${specialty.name} | Shifa International Hospitals` },
     description: specialty.tagline,
     alternates: {
       canonical: `/specialities/${specialty.slug}/islamabad`,

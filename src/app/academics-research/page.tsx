@@ -5,7 +5,7 @@ import { HeroSection } from "@/components/shared/HeroSection";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Academics and Research | Shifa International Hospitals",
+  title: { absolute: "Academics and Research | Shifa International Hospitals" },
   description:
     "Academic and research programs including postgraduate training, nursing education, and clinical research.",
   alternates: { canonical: "https://www.shifa.com.pk/academics-research" },

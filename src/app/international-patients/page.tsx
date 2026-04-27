@@ -13,7 +13,7 @@ import {
 } from "@/data/shifa-pages";
 
 export const metadata: Metadata = {
-  title: internationalPatientsSeo.title,
+  title: { absolute: internationalPatientsSeo.title },
   description: internationalPatientsSeo.description,
   keywords: internationalPatientsSeo.keywords,
   alternates: { canonical: internationalPatientsSeo.canonical },

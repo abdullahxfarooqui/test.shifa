@@ -9,7 +9,7 @@ type SearchPageProps = {
 };
 
 export const metadata: Metadata = {
-  title: "Search | Shifa International Hospitals",
+  title: { absolute: "Search | Shifa International Hospitals" },
   description: "Search specialties, doctors, and condition guides at Shifa International Hospitals.",
   alternates: {
     canonical: "/search",

@@ -58,7 +58,7 @@ export function HeroSection({ name, tagline, stats }: HeroSectionProps) {
               Book Appointment
             </Link>
             <Link
-              href="https://www.shifa.com.pk/find-a-doctor"
+              href="/doctors"
               className="rounded-full border border-[var(--color-border)] bg-transparent px-5 py-2.5 text-sm font-semibold text-[var(--color-text-1)] transition-[var(--transition)] hover:bg-[var(--color-surface-2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[var(--color-primary)]"
             >
               Find a Doctor

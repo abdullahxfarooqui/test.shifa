@@ -6,7 +6,7 @@ import { FormBuilder } from "@/components/shared/FormBuilder";
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Corporate Health Services | Shifa International Hospitals",
+  title: { absolute: "Corporate Health Services | Shifa International Hospitals" },
   description: "Corporate health packages, executive screening, and employee wellness programs.",
   alternates: { canonical: "https://www.shifa.com.pk/corporate" },
 };

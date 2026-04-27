@@ -6,7 +6,7 @@ const description =
   "Get expert oncology care in Islamabad at Shifa Cancer Center with advanced diagnostics, multidisciplinary treatment, and compassionate support from diagnosis to recovery.";
 
 export const metadata: Metadata = {
-  title: "Oncology | Shifa International Hospitals – Cancer Care in Islamabad",
+  title: { absolute: "Oncology | Cancer Care in Islamabad | Shifa International Hospitals" },
   description,
   keywords: [
     "oncology in islamabad",

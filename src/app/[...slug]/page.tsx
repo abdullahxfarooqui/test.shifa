@@ -27,15 +27,12 @@ export default async function CatchAllPage({ params }: CatchAllPageProps) {
           <p className="mt-4 text-[var(--text-muted)]">
             The section <span className="font-semibold text-[var(--text-dark)]">{label}</span> is being prepared.
           </p>
-          <p className="mt-2 text-sm text-[var(--text-muted)]">
-            Please continue to the Oncology benchmark page for the complete production design sample.
-          </p>
           <div className="mt-8">
             <Link
-              href="/specialities/oncology"
+              href="/"
               className="inline-flex items-center rounded-xl bg-[var(--brand-primary)] px-5 py-3 text-sm font-semibold text-white"
             >
-              Go to Oncology Page
+              Return to Homepage
             </Link>
           </div>
         </div>

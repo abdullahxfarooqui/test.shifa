@@ -4,19 +4,33 @@ import { MapPin, Phone } from "lucide-react";
 
 import { SOCIAL_LINKS } from "@/lib/social-links";
 
-const patientPortalLinks = ["Find a Doctor", "Patient Reports", "Get a Second Opinion"];
-const healthLibraryLinks = ["A-Z Patient Guide", "Shifa News", "Health Calculators"];
-const aboutLinks = ["Company Overview", "Investor Relations", "Awards & Accolades", "Policies"];
-const subsidiaryLinks = [
-  "Shifa National Hospital Faisalabad (Pvt.) Limited",
-  "Shifa Medical Center Islamabad (Pvt.) Limited",
-  "Shifa Development Services (Pvt.) Limited",
-];
-const associatedLinks = ["Shifa CARE (Pvt.) Limited", "SIHT (Pvt.) Limited"];
+type FooterLink = { label: string; href: string };
 
-function toHref(value: string) {
-  return `/${value.toLowerCase().replace(/\s*&\s*/g, "-").replace(/\s+/g, "-")}`;
-}
+const patientPortalLinks: FooterLink[] = [
+  { label: "Find a Doctor", href: "/doctors" },
+  { label: "Patient Reports", href: "/patient-portal" },
+  { label: "Get a Second Opinion", href: "/patient-portal" },
+];
+const healthLibraryLinks: FooterLink[] = [
+  { label: "A-Z Patient Guide", href: "/health-library/patient-guide" },
+  { label: "Shifa News", href: "/health-library" },
+  { label: "Health Calculators", href: "/health-library/calculators" },
+];
+const aboutLinks: FooterLink[] = [
+  { label: "Company Overview", href: "/company-overview" },
+  { label: "Investor Relations", href: "/investor-relations" },
+  { label: "Awards & Accolades", href: "/awards-accolades" },
+  { label: "Policies", href: "/policies" },
+];
+const subsidiaryLinks: FooterLink[] = [
+  { label: "Shifa National Hospital Faisalabad", href: "/shifa-national-hospital-faisalabad" },
+  { label: "Shifa Medical Center Islamabad", href: "/shifa-medical-center-islamabad" },
+  { label: "Shifa Development Services", href: "/shifa-development-services" },
+];
+const associatedLinks: FooterLink[] = [
+  { label: "Shifa CARE", href: "/shifa-care" },
+  { label: "SIHT", href: "/siht" },
+];
 
 export function SiteFooter() {
   return (
@@ -104,7 +118,7 @@ export function SiteFooter() {
 
 type FooterColumnProps = {
   title: string;
-  links: string[];
+  links: FooterLink[];
 };
 
 function FooterColumn({ title, links }: FooterColumnProps) {
@@ -112,10 +126,10 @@ function FooterColumn({ title, links }: FooterColumnProps) {
     <div>
       <h3 className="text-sm font-semibold uppercase tracking-wide text-white">{title}</h3>
       <ul className="mt-4 space-y-2 text-sm text-slate-200">
-        {links.map((item) => (
-          <li key={item}>
-            <Link href={toHref(item)} className="hover:text-white">
-              {item}
+        {links.map(({ label, href }) => (
+          <li key={label}>
+            <Link href={href} className="hover:text-white">
+              {label}
             </Link>
           </li>
         ))}

@@ -2,7 +2,9 @@ import type { MetadataRoute } from "next";
 
 import { specialtyPageConfig } from "@/lib/specialty-page-config";
 
-const SITE_URL = "https://www.shifa.com.pk";
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://www.shifa.com.pk");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${article.title} | Shifa International Hospitals`,
+    title: { absolute: `${article.title} | Shifa International Hospitals` },
     description: article.excerpt,
     alternates: { canonical: `https://www.shifa.com.pk/health-library/blogs/${slug}` },
     openGraph: {

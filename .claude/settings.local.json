@@ -8,7 +8,25 @@
       "WebFetch(domain:eshifa.org)",
       "WebFetch(domain:careers.shifa.com.pk)",
       "WebFetch(domain:shifanews.com)",
-      "WebFetch(domain:patientportal.shifa.com.pk)"
+      "WebFetch(domain:patientportal.shifa.com.pk)",
+      "Bash(npm run *)",
+      "Bash(/Users/abdullahfarooqui/.nvm/versions/node/v22.14.0/bin/npm run *)",
+      "Bash(node -e \"const { execSync } = require\\('child_process'\\); console.log\\(execSync\\('which npm'\\).toString\\(\\).trim\\(\\)\\)\")",
+      "Bash(export PATH=\"/usr/local/bin:/opt/homebrew/bin:$PATH\")",
+      "Bash(npm --version)",
+      "Bash(/Users/abdullahfarooqui/.nvm/versions/node/v20.20.2/bin/npm run *)",
+      "Bash(/Users/abdullahfarooqui/.nvm/versions/node/v20.20.2/bin/node /Users/abdullahfarooqui/.nvm/versions/node/v20.20.2/bin/npm run build)",
+      "Bash(export PATH=\"/Users/abdullahfarooqui/.nvm/versions/node/v20.20.2/bin:$PATH\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(npm i *)",
+      "Bash(xargs cat *)",
+      "Bash(/usr/local/bin/npx tsc *)",
+      "Bash(node_modules/.bin/tsc --noEmit)",
+      "Bash(~/.nvm/versions/node/v20.20.2/bin/node node_modules/.bin/tsc --noEmit)",
+      "Bash(git checkout *)",
+      "Bash(git merge *)"
     ]
   }
 }

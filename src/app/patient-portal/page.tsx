@@ -8,7 +8,7 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { patientPortalFeatures, patientPortalHero, patientPortalSeo } from "@/data/shifa-pages";
 
 export const metadata: Metadata = {
-  title: patientPortalSeo.title,
+  title: { absolute: patientPortalSeo.title },
   description: patientPortalSeo.description,
   keywords: patientPortalSeo.keywords,
   alternates: { canonical: patientPortalSeo.canonical },

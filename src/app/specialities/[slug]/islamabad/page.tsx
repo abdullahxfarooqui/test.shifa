@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const firstProcedure = data.treatments[0]?.title ?? data.name;
 
   return {
-    title: `${data.name} | Shifa International Hospitals Islamabad`,
+    title: { absolute: `${data.name} in Islamabad | Shifa International Hospitals` },
     description: seoDescription,
     keywords: `${data.name.toLowerCase()} islamabad, ${data.name.toLowerCase()} pakistan, shifa ${data.name.toLowerCase()}, best ${data.name.toLowerCase()} hospital islamabad, ${firstProcedure.toLowerCase()} in islamabad, ${data.name.toLowerCase()} rawalpindi`,
     alternates: { canonical: data.url },

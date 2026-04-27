@@ -6,7 +6,7 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { healthLibraryHero, healthLibrarySections, healthLibrarySeo } from "@/data/shifa-pages";
 
 export const metadata: Metadata = {
-  title: healthLibrarySeo.title,
+  title: { absolute: healthLibrarySeo.title },
   description: healthLibrarySeo.description,
   keywords: healthLibrarySeo.keywords,
   alternates: { canonical: healthLibrarySeo.canonical },
