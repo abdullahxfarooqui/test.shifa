@@ -361,7 +361,7 @@ function ArticleChart({ enhancement }: { enhancement: ArticleEnhancement }) {
                   border: "1px solid #E4E2DC",
                   borderRadius: "8px",
                 }}
-                formatter={(value: number | null | undefined): ReactNode => {
+                formatter={(value: any): ReactNode => {
                   if (value === null || value === undefined) return "";
                   return [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel];
                 }}
@@ -389,7 +389,7 @@ function ArticleChart({ enhancement }: { enhancement: ArticleEnhancement }) {
                   border: "1px solid #E4E2DC",
                   borderRadius: "8px",
                 }}
-                formatter={(value: number | null | undefined): ReactNode => {
+                formatter={(value: any): ReactNode => {
                   if (value === null || value === undefined) return "";
                   return [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel];
                 }}
@@ -414,7 +414,7 @@ function ArticleChart({ enhancement }: { enhancement: ArticleEnhancement }) {
                   border: "1px solid #E4E2DC",
                   borderRadius: "8px",
                 }}
-                formatter={(value: number | null | undefined): ReactNode => {
+                formatter={(value: any): ReactNode => {
                   if (value === null || value === undefined) return "";
                   return [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel];
                 }}
