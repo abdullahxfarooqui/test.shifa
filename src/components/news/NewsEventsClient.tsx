@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 
 import { FilterBar } from "@/components/shared/FilterBar";
-import type { Article, NewsCategory } from "@/types/shifa";
+import type { Article, ArticleCategory, NewsCategory } from "@/types/shifa";
 
 type NewsEventsClientProps = {
   categories: NewsCategory[];
