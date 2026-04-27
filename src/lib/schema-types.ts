@@ -81,7 +81,16 @@ export interface SiteGraphSchema {
   "@graph": (MedicalOrganizationSchema | WebSiteSchema)[];
 }
 
+// Union type for all supported JSON-LD schemas
+export type JSONLDSchema =
+  | MedicalOrganizationSchema
+  | WebSiteSchema
+  | MedicalConditionSchema
+  | FAQSchema
+  | PhysicianSchema
+  | SiteGraphSchema;
+
 // Helper function to safely stringify and escape JSON-LD
-export function stringifySchema(schema: Record<string, any>): string {
+export function stringifySchema(schema: JSONLDSchema): string {
   return JSON.stringify(schema).replace(/</g, "\\u003c");
 }

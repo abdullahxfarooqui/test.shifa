@@ -48,6 +48,9 @@ export type ArticleCategory =
 /** Specialty/Service categories */
 export type SpecialtyCategory = "Surgical" | "Medical" | "Diagnostic" | "Critical Care";
 
+/** Specialty listing categories (alias for consistency) */
+export type ListingCategory = "Surgical" | "Medical" | "Diagnostic" | "Critical Care";
+
 /** Oncology diagnostic categories */
 export type DiagnosticCategory = "All" | "Screening" | "Imaging" | "Lab" | "Genetic";
 
