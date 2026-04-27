@@ -71,7 +71,7 @@ export function NewsEventsClient({ categories }: NewsEventsClientProps) {
     }));
 
     if (lang && !options.some((option) => option.value === lang)) {
-      options.unshift({ value: lang, label: labelMap[lang] ?? lang.toUpperCase() });
+      options.unshift({ value: lang as "en" | "ur", label: labelMap[lang] ?? lang.toUpperCase() });
     }
 
     return [{ value: "", label: "All" }, ...options];
