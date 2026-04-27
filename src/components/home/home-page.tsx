@@ -336,7 +336,7 @@ export function HomePage() {
               <h2 className="text-3xl font-black text-slate-900 sm:text-4xl">Medical & Surgical Specialities</h2>
               <p className="mt-3 text-slate-600">Explore key departments in Islamabad and continue to the full specialties directory.</p>
             </div>
-            <Button asChild variant="outline">
+            <Button asChild variant="secondary" className="border border-slate-300 bg-white text-slate-900 hover:bg-slate-50">
               <Link href="/specialities" className="inline-flex items-center gap-2">
                 View all <ArrowRight className="h-4 w-4" />
               </Link>
@@ -449,7 +449,7 @@ export function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
             <h2 className="text-3xl font-black text-slate-900 sm:text-4xl">Stories of Hope and Healing</h2>
-            <Button asChild variant="outline">
+            <Button asChild variant="secondary" className="border border-slate-300 bg-white text-slate-900 hover:bg-slate-50">
               <Link href="/health-library/blogs">See more stories</Link>
             </Button>
           </div>
