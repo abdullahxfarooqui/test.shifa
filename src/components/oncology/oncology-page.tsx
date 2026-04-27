@@ -317,7 +317,7 @@ const faqItems = [
 
 const fadeUp = {
   hidden: { opacity: 0, y: 22 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.28, ease: "easeInOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.28 } },
 };
 
 const stagger = {
@@ -522,7 +522,7 @@ export function OncologyPage() {
                   key={item.title}
                   variants={fadeUp}
                   whileHover={{ y: -6, scale: 1.02, rotateX: 1.2, rotateY: -1.2 }}
-                  transition={{ duration: 0.28, ease: "easeInOut" }}
+                  transition={{ duration: 0.28 }}
                   className={cn(
                     "group relative overflow-hidden rounded-2xl border border-gray-100 bg-gradient-to-br from-[#f8fbff] to-[#eaf3ff] shadow-sm hover:shadow-xl",
                     item.bento,
@@ -586,7 +586,7 @@ export function OncologyPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -12 }}
-                    transition={{ duration: 0.28, ease: "easeInOut" }}
+                    transition={{ duration: 0.28 }}
                     className="grid overflow-hidden rounded-2xl bg-[#F8FBFF] shadow-sm transition-all duration-300 ease-in-out hover:scale-[1.02] hover:shadow-xl sm:grid-cols-[220px_1fr]"
                   >
                     <div className="relative min-h-[170px]">
@@ -644,7 +644,7 @@ export function OncologyPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.28, ease: "easeInOut" }}
+                transition={{ duration: 0.28 }}
                 className="mt-8 grid overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-xl lg:grid-cols-[1.1fr_1fr]"
               >
                 <div className="p-8 lg:p-10">
@@ -817,7 +817,7 @@ export function OncologyPage() {
               key={activeTestimonial}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.28, ease: "easeInOut" }}
+              transition={{ duration: 0.28 }}
               className="mt-10 grid overflow-hidden rounded-2xl bg-[#F8FBFF] shadow-sm md:grid-cols-[1fr_1.1fr]"
             >
               <div className="relative min-h-[320px]">
