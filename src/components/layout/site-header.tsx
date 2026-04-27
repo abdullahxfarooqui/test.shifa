@@ -1,17 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Briefcase,
-  ChevronDown,
-  CirclePlay,
-  Globe,
-  Languages,
-  MessageCircle,
-  Phone,
-  Search,
-} from "lucide-react";
+import { ChevronDown, Languages, Phone, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { SOCIAL_LINKS } from "@/lib/social-links";
 
 const secondaryLinks = [
   { label: "International Patients", href: "/international-patients" },
@@ -30,12 +22,6 @@ const primaryLinks = [
   { label: "Health Library", href: "/health-library" },
 ];
 
-const socialLinks = [
-  { label: "Facebook", href: "#", icon: Globe },
-  { label: "Instagram", href: "#", icon: MessageCircle },
-  { label: "YouTube", href: "#", icon: CirclePlay },
-  { label: "LinkedIn", href: "#", icon: Briefcase },
-];
 
 export function SiteHeader() {
   return (
@@ -47,14 +33,18 @@ export function SiteHeader() {
 
           {/* Left: social icons + language + location */}
           <div className="flex items-center gap-1.5">
-            {socialLinks.map(({ label, href, icon: Icon }) => (
+            {SOCIAL_LINKS.map(({ label, href, path }) => (
               <Link
                 key={label}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="grid h-[26px] w-[26px] place-items-center rounded-full border border-slate-300 text-slate-500 transition-colors hover:border-[#0B5FA5] hover:text-[#0B5FA5]"
               >
-                <Icon className="h-3.5 w-3.5" />
+                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor" aria-hidden="true">
+                  <path d={path} />
+                </svg>
               </Link>
             ))}
 

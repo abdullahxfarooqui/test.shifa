@@ -236,7 +236,7 @@ export function HomePage() {
           </div>
 
           <div className="rounded-3xl border border-white/25 bg-white/10 p-5 backdrop-blur-md sm:p-6">
-            <h2 className="text-lg font-bold text-white">Quick Access</h2>
+            <h3 className="text-lg font-bold text-white">Quick Access</h3>
             <div className="mt-4 grid gap-2 sm:grid-cols-2">
               {keyActions.map((item) => (
                 <Link
