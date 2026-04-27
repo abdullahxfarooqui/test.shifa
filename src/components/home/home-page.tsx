@@ -211,7 +211,7 @@ export function HomePage() {
     <main className="bg-[#f8fbff] text-slate-900">
       <section className="relative overflow-hidden bg-[#0a2443]">
         <div className="absolute inset-0">
-          <Image src={islamabadHeroImage} alt="Shifa International Hospital Islamabad campus" fill priority className="object-cover opacity-40" />
+          <Image src={islamabadHeroImage} alt="Shifa International Hospital Islamabad campus" fill priority sizes="100vw" className="object-cover opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#07203b]/95 via-[#0b2f57]/85 to-[#0b5fa5]/70" />
         </div>
         <div className="relative mx-auto grid min-h-[66vh] max-w-7xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-20">
