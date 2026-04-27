@@ -240,8 +240,10 @@ export type AnimationVariant = {
   visible: Record<string, number | string | { staggerChildren?: number; transition?: Transition }>;
 };
 
-/** Recharts Tooltip formatter with proper generic typing */
-export type ChartFormatterFn = (value: number | null) => [string, string];
+/** Recharts Tooltip formatter — value typed as any because Recharts' ValueType
+ *  includes string | number | (string | number)[], and runtime delivers null/undefined.
+ *  This is an intentional library integration boundary; do not narrow further. */
+export type ChartFormatterFn = (value: any) => ReactNode | [ReactNode, ReactNode];
 
 /** Chart data point structure */
 export type ChartDataPoint = {
