@@ -4,16 +4,16 @@ import type { SiteGraphSchema } from "@/lib/schema-types";
 import { stringifySchema } from "@/lib/schema-types";
 
 const description =
-  "Shifa International Hospitals delivers trusted tertiary care in Pakistan with JCI-accredited quality, 45+ specialties, and expert consultants in Islamabad and Faisalabad.";
+  "Shifa International Hospitals: JCI-accredited care, 45+ specialties, and expert consultants in Islamabad and Faisalabad.";
 
 export const metadata: Metadata = {
-  title: "Shifa International Hospitals — Trusted Healthcare in Pakistan",
+  title: "Shifa International Hospitals | Healthcare in Pakistan",
   description,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Shifa International Hospitals — Trusted Healthcare in Pakistan",
+    title: "Shifa International Hospitals | Healthcare in Pakistan",
     description,
     url: "https://www.shifa.com.pk",
     type: "website",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shifa International Hospitals — Trusted Healthcare in Pakistan",
+    title: "Shifa International Hospitals | Healthcare in Pakistan",
     description,
     images: [
       "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1800&q=80",
@@ -66,7 +66,10 @@ export default function Home() {
         inLanguage: "en-PK",
         potentialAction: {
           "@type": "SearchAction",
-          target: "https://www.shifa.com.pk/search?q={search_term_string}",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://www.shifa.com.pk/search?q={search_term_string}",
+          },
           "query-input": "required name=search_term_string",
         },
       },

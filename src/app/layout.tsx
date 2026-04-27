@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import { Analytics } from "@vercel/analytics/next";
@@ -18,14 +18,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://www.shifa.com.pk");
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.shifa.com.pk"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Shifa International Hospitals | Healthcare with Compassion in Pakistan",
+    default: "Shifa International Hospitals | Healthcare in Pakistan",
     template: "%s | Shifa International Hospitals",
   },
   description:
-    "Shifa International Hospitals offers trusted tertiary care in Pakistan with advanced diagnostics, specialist treatment, and patient-centered services in Islamabad.",
+    "Shifa International Hospitals: advanced diagnostics, specialist care, and patient-centered services in Islamabad, Pakistan.",
   openGraph: {
     title: "Shifa International Hospitals | Healthcare with Compassion in Pakistan",
     description:

@@ -71,7 +71,10 @@ export interface WebSiteSchema {
   inLanguage: string;
   potentialAction: {
     "@type": "SearchAction";
-    target: string;
+    target: {
+      "@type": "EntryPoint";
+      urlTemplate: string;
+    };
     "query-input": string;
   };
 }
