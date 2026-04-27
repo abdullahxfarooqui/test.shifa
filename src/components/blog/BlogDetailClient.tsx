@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useMemo } from "react";
+import type { ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   BarChart,
@@ -360,7 +361,7 @@ function ArticleChart({ enhancement }: { enhancement: ArticleEnhancement }) {
                   border: "1px solid #E4E2DC",
                   borderRadius: "8px",
                 }}
-                formatter={(value) => [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel]}
+                formatter={(value: any): ReactNode => [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel]}
               />
               <Legend />
               <Line
@@ -385,7 +386,7 @@ function ArticleChart({ enhancement }: { enhancement: ArticleEnhancement }) {
                   border: "1px solid #E4E2DC",
                   borderRadius: "8px",
                 }}
-                formatter={(value) => [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel]}
+                formatter={(value: any): ReactNode => [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel]}
               />
               <Legend />
               <Bar dataKey="value" fill="#C8102E" name={chart.legendLabel} radius={[8, 8, 0, 0]} />
@@ -407,7 +408,7 @@ function ArticleChart({ enhancement }: { enhancement: ArticleEnhancement }) {
                   border: "1px solid #E4E2DC",
                   borderRadius: "8px",
                 }}
-                formatter={(value) => [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel]}
+                formatter={(value: any): ReactNode => [`${value}${chart.unit ? " " + chart.unit : ""}`, chart.legendLabel]}
               />
               <Bar dataKey="value" fill="#C8102E" name={chart.legendLabel} radius={[0, 8, 8, 0]} />
             </BarChart>
