@@ -5,6 +5,8 @@ import { Analytics } from "@vercel/analytics/next";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { WebVitalsReporter } from "@/components/WebVitalsReporter";
+import { VitalsDebugOverlay } from "@/components/VitalsDebugOverlay";
 
 import "./globals.css";
 
@@ -69,6 +71,8 @@ export default function RootLayout({
           <SiteFooter />
         </div>
         <Analytics />
+        <WebVitalsReporter />
+        {process.env.NODE_ENV === "development" && <VitalsDebugOverlay />}
       </body>
     </html>
   );

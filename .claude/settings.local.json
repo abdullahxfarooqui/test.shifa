@@ -27,7 +27,10 @@
       "Bash(~/.nvm/versions/node/v20.20.2/bin/node node_modules/.bin/tsc --noEmit)",
       "Bash(git checkout *)",
       "Bash(git merge *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(npm install *)",
+      "Bash(~/.nvm/versions/node/v20.20.2/bin/npm install *)",
+      "Bash(~/.nvm/versions/node/v20.20.2/bin/node ~/.nvm/versions/node/v20.20.2/bin/npm install web-vitals@^3 --save)"
     ]
   }
 }
