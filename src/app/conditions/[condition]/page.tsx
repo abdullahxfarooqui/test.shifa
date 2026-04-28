@@ -121,7 +121,7 @@ export default async function ConditionPage({ params }: ConditionPageProps) {
           <Link href="/specialities" className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">
             Explore Specialties
           </Link>
-          <Link href="/find-a-doctor" className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">
+          <Link href="/doctors" className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">
             Find a Doctor
           </Link>
           <Link href="/book-appointment" className="rounded-full bg-[var(--brand-accent)] px-4 py-2 text-sm font-semibold text-white">
@@ -204,7 +204,7 @@ export default async function ConditionPage({ params }: ConditionPageProps) {
             <Link href="/specialities" className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700">
               Browse Specialties
             </Link>
-            <Link href="/find-a-doctor" className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700">
+            <Link href="/doctors" className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700">
               Search Doctors
             </Link>
             <Link href={`/conditions/${conditions[0]?.slug ?? "breast-cancer-treatment"}`} className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700">
