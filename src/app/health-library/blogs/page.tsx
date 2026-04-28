@@ -5,9 +5,23 @@ import { SectionWrapper } from "@/components/shared/SectionWrapper";
 import { newsCategories } from "@/data/shifa-pages";
 
 export const metadata: Metadata = {
-  title: "Health Blogs | Health Library",
-  description: "Browse health blog entries and educational stories from Shifa content channels.",
+  title: { absolute: "Health Blogs | Patient Education | Shifa International Hospitals" },
+  description: "Evidence-based health articles, specialist insights, and patient education from Shifa International Hospitals in Islamabad. Browse topics across oncology, cardiology, diabetes, neurology, and more.",
+  keywords: ["health blogs Pakistan", "hospital health articles Islamabad", "Shifa health library", "patient education Pakistan"],
   alternates: { canonical: "https://www.shifa.com.pk/health-library/blogs" },
+  openGraph: {
+    title: "Health Blogs | Patient Education | Shifa International Hospitals",
+    description: "Evidence-based health articles, specialist insights, and patient education from Shifa International Hospitals in Islamabad.",
+    url: "https://www.shifa.com.pk/health-library/blogs",
+    siteName: "Shifa International Hospitals",
+    type: "website",
+    locale: "en_PK",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Health Blogs | Shifa International Hospitals",
+    description: "Evidence-based health articles and specialist insights from Shifa International Hospitals.",
+  },
 };
 
 export default function BlogsPage() {

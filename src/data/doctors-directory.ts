@@ -18,6 +18,14 @@ const parseAvailability = (value: string): string[] => {
     return ["Monday", "Tuesday", "Wednesday", "Thursday"];
   }
 
+  if (value.toLowerCase().includes("mon") && value.toLowerCase().includes("tue") && value.toLowerCase().includes("thu")) {
+    return ["Monday", "Tuesday", "Thursday"];
+  }
+
+  if (value.toLowerCase().includes("mon") && value.toLowerCase().includes("wed") && value.toLowerCase().includes("fri") && !value.toLowerCase().includes("thu")) {
+    return ["Monday", "Wednesday", "Friday"];
+  }
+
   return [];
 };
 
@@ -26,6 +34,9 @@ const genderBySlug: Record<string, "male" | "female"> = {
   "dr-umer-farooq": "male",
   "dr-sara-naveed": "female",
   "dr-hina-ashraf": "female",
+  "dr-tariq-mahmood": "male",
+  "dr-farrukh-khan": "male",
+  "dr-rabia-siddiqui": "female",
 };
 
 export const specialtyOptions = [

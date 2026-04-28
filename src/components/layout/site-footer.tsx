@@ -13,7 +13,7 @@ const patientPortalLinks: FooterLink[] = [
 ];
 const healthLibraryLinks: FooterLink[] = [
   { label: "A-Z Patient Guide", href: "/health-library/patient-guide" },
-  { label: "Shifa News", href: "/health-library" },
+  { label: "Blogs & News", href: "/health-library/blogs" },
   { label: "Health Calculators", href: "/health-library/calculators" },
 ];
 const aboutLinks: FooterLink[] = [

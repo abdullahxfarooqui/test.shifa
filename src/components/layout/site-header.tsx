@@ -10,7 +10,7 @@ const secondaryLinks = [
   { label: "Home Health", href: "/home-health" },
   { label: "Academics & Research", href: "/academics-research" },
   { label: "Corporate", href: "/corporate" },
-  { label: "News & Events", href: "/health-library" },
+  { label: "Blogs & News", href: "/health-library/blogs" },
   { label: "Careers", href: "/careers" },
   { label: "Virtual Tour", href: "#virtual-tour" },
 ];

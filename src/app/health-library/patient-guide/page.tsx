@@ -12,9 +12,23 @@ const guides = [
 ];
 
 export const metadata: Metadata = {
-  title: "Patient Guide | Health Library",
-  description: "Patient guide section with condition-focused content and symptom education.",
+  title: { absolute: "Patient Guide A–Z | Conditions & Symptoms | Shifa International Hospitals" },
+  description: "A to Z patient guides covering dengue fever, diabetes, hypertension, stroke, and knee pain. Trusted health education from Shifa International Hospitals, Islamabad.",
+  keywords: ["patient guide Pakistan", "health guide Islamabad", "dengue fever guide", "diabetes patient education Pakistan"],
   alternates: { canonical: "https://www.shifa.com.pk/health-library/patient-guide" },
+  openGraph: {
+    title: "Patient Guide A–Z | Conditions & Symptoms | Shifa International Hospitals",
+    description: "A to Z patient guides covering dengue fever, diabetes, hypertension, stroke, and knee pain.",
+    url: "https://www.shifa.com.pk/health-library/patient-guide",
+    siteName: "Shifa International Hospitals",
+    type: "website",
+    locale: "en_PK",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Patient Guide | Shifa International Hospitals",
+    description: "Patient education guides covering dengue fever, diabetes, hypertension, stroke, and knee pain.",
+  },
 };
 
 export default function PatientGuidePage() {

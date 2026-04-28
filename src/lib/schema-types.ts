@@ -50,16 +50,36 @@ export interface MedicalOrganizationSchema {
   "@type": "MedicalOrganization" | "Hospital";
   "@id": string;
   name: string;
+  alternateName?: string;
   url: string;
+  logo?: string;
+  image?: string;
   telephone: string;
+  email?: string;
+  foundingDate?: string;
+  numberOfBeds?: number;
+  description?: string;
   address: {
     "@type": "PostalAddress";
     streetAddress: string;
     addressLocality: string;
     addressRegion: string;
+    postalCode?: string;
     addressCountry: string;
   };
+  geo?: {
+    "@type": "GeoCoordinates";
+    latitude: number;
+    longitude: number;
+  };
+  openingHours?: string;
+  priceRange?: string;
+  currenciesAccepted?: string;
+  paymentAccepted?: string;
   medicalSpecialty: string[];
+  availableService?: Array<{ "@type": string; name: string }>;
+  accreditation?: string;
+  sameAs?: string[];
 }
 
 export interface WebSiteSchema {

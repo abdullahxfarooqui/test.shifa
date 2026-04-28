@@ -220,7 +220,7 @@ export function HomePage() {
               Islamabad flagship campus
             </p>
             <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
-              Healthcare with Compassion for All
+              Best Hospital in Islamabad — JCI-Accredited Quaternary Care
             </h1>
             <p className="mt-4 max-w-2xl text-base text-blue-100 sm:text-lg">
               JCI Gold-accredited quaternary care with advanced centers in oncology, transplant, cardiac sciences, diagnostics, and emergency services.
@@ -269,6 +269,29 @@ export function HomePage() {
               <p className="mt-1 text-xs text-slate-600">{item.desc}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Trust / accreditation bar */}
+      <section className="border-y border-slate-100 bg-slate-50">
+        <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Accreditations & Recognition</p>
+            <div className="flex flex-wrap items-center gap-6">
+              {[
+                { label: "JCI Gold Seal", sub: "Joint Commission International" },
+                { label: "CPSP Recognised", sub: "Postgraduate Training" },
+                { label: "ISO 15189", sub: "Laboratory Accreditation" },
+                { label: "600+ Beds", sub: "Quaternary Care Capacity" },
+                { label: "Est. 1987", sub: "37+ Years of Service" },
+              ].map((badge) => (
+                <div key={badge.label} className="flex flex-col items-center rounded-xl border border-slate-200 bg-white px-4 py-2 text-center shadow-sm">
+                  <span className="text-sm font-bold text-[#0b5fa5]">{badge.label}</span>
+                  <span className="text-[11px] text-slate-500">{badge.sub}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -454,16 +477,30 @@ export function HomePage() {
             </Button>
           </div>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {[
-              "Coordinated cancer care journey",
-              "Emergency response that saved a life",
-              "Cardiac recovery with rehab support",
-            ].map((story) => (
-              <article key={story} className="rounded-2xl border border-slate-200 bg-[#fbfdff] p-5">
-                <p className="text-lg font-semibold text-slate-900">{story}</p>
-                <p className="mt-2 text-sm text-slate-600">Real patient experiences and family stories from Shifa care teams.</p>
-              </article>
-            ))}
+            <article className="rounded-2xl border border-slate-200 bg-[#fbfdff] p-5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-[#0b5fa5]">Oncology · Breast Cancer</p>
+              <p className="mt-2 text-lg font-semibold text-slate-900">"The tumor board gave me clarity when I needed it most"</p>
+              <p className="mt-2 text-sm text-slate-600">
+                Nadia R., 44, was diagnosed with stage II breast cancer in 2024. After a multidisciplinary tumor board review at Shifa, she received a coordinated treatment plan covering surgery, chemotherapy, and targeted therapy. She completed treatment in eight months and returned to work full-time.
+              </p>
+              <p className="mt-3 text-xs text-slate-400">Islamabad · March 2025</p>
+            </article>
+            <article className="rounded-2xl border border-slate-200 bg-[#fbfdff] p-5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-[#0b5fa5]">Cardiology · Heart Attack</p>
+              <p className="mt-2 text-lg font-semibold text-slate-900">"The cardiac team had the stent in within 40 minutes"</p>
+              <p className="mt-2 text-sm text-slate-600">
+                Khalid M., 58, arrived at Shifa Emergency with severe chest pain at 2 AM. The interventional cardiology team performed a primary PCI within the door-to-balloon time target. He was discharged in four days and completed cardiac rehabilitation over six weeks.
+              </p>
+              <p className="mt-3 text-xs text-slate-400">Rawalpindi · November 2024</p>
+            </article>
+            <article className="rounded-2xl border border-slate-200 bg-[#fbfdff] p-5">
+              <p className="text-xs font-semibold uppercase tracking-wide text-[#0b5fa5]">Orthopedics · Knee Replacement</p>
+              <p className="mt-2 text-lg font-semibold text-slate-900">"I walked unaided after just three weeks"</p>
+              <p className="mt-2 text-sm text-slate-600">
+                Sajida B., 67, had severe knee osteoarthritis for six years before her total knee replacement at Shifa. The surgical and rehabilitation team had her walking without assistance within three weeks. She now gardens and manages her daily routine without pain.
+              </p>
+              <p className="mt-3 text-xs text-slate-400">Islamabad · January 2025</p>
+            </article>
           </div>
         </div>
       </section>

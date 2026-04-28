@@ -4,13 +4,23 @@ import type { SiteGraphSchema } from "@/lib/schema-types";
 import { stringifySchema } from "@/lib/schema-types";
 
 const description =
-  "Shifa International Hospitals: JCI-accredited care, 45+ specialties, and expert consultants in Islamabad and Faisalabad.";
+  "Shifa International Hospitals is the best JCI-accredited hospital in Islamabad, Pakistan. Expert consultants across 45+ specialties including oncology, cardiology, neurology, orthopedics, and transplant services.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Shifa International Hospitals | Healthcare in Pakistan" },
+  title: { absolute: "Best Hospital in Islamabad | JCI-Accredited | Shifa International Hospitals" },
   description,
+  keywords: [
+    "best hospital in Islamabad",
+    "JCI accredited hospital Pakistan",
+    "Shifa International Hospitals",
+    "hospital Islamabad",
+    "specialist doctors Islamabad",
+    "cancer treatment Pakistan",
+    "cardiac surgery Islamabad",
+    "neurology hospital Pakistan",
+  ],
   alternates: {
-    canonical: "/",
+    canonical: "https://www.shifa.com.pk",
   },
   openGraph: {
     title: "Shifa International Hospitals | Healthcare in Pakistan",
@@ -48,16 +58,56 @@ export default function Home() {
         "@type": "Hospital",
         "@id": "https://www.shifa.com.pk/#organization",
         name: "Shifa International Hospitals",
+        alternateName: "Shifa International",
         url: "https://www.shifa.com.pk",
+        logo: "https://www.shifa.com.pk/Shifa-logo.png",
+        image: "https://www.shifa.com.pk/Shifa-logo.png",
         telephone: "+92-51-8464646",
+        email: "info@shifa.com.pk",
+        foundingDate: "1987",
+        numberOfBeds: 600,
+        description: "JCI-accredited quaternary care hospital in Islamabad, Pakistan with 45+ medical specialties, advanced diagnostics, and internationally trained consultant physicians.",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Pitras Bukhari Road, H-8/4",
           addressLocality: "Islamabad",
           addressRegion: "Islamabad Capital Territory",
+          postalCode: "44000",
           addressCountry: "PK",
         },
-        medicalSpecialty: ["Oncology", "Cardiology", "Neurology", "Orthopedics"],
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 33.6844,
+          longitude: 73.0479,
+        },
+        openingHours: "Mo-Su 00:00-24:00",
+        priceRange: "$$",
+        currenciesAccepted: "PKR",
+        paymentAccepted: "Cash, Credit Card, Insurance",
+        medicalSpecialty: [
+          "Oncology",
+          "Cardiology",
+          "Neurology",
+          "Orthopedics",
+          "Transplant Surgery",
+          "Endocrinology",
+          "Nephrology",
+          "Gastroenterology",
+          "Pulmonology",
+          "Radiology",
+        ],
+        availableService: [
+          { "@type": "MedicalTherapy", name: "Cancer Treatment" },
+          { "@type": "MedicalTherapy", name: "Cardiac Surgery" },
+          { "@type": "MedicalTherapy", name: "Organ Transplant" },
+          { "@type": "MedicalTherapy", name: "Neurosurgery" },
+        ],
+        accreditation: "Joint Commission International (JCI) Gold Seal",
+        sameAs: [
+          "https://www.facebook.com/ShifaInternationalHospitals",
+          "https://twitter.com/shifahospitals",
+          "https://www.linkedin.com/company/shifa-international-hospitals",
+        ],
       },
       {
         "@type": "WebSite",

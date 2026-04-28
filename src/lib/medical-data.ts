@@ -136,7 +136,7 @@ export const doctors: Doctor[] = [
     lastReviewed: "2025-10-01",
     image:
       // TODO: replace with real Shifa photography
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=900&q=80",
   },
   {
     slug: "dr-umer-farooq",
@@ -159,7 +159,7 @@ export const doctors: Doctor[] = [
     lastReviewed: "2025-10-01",
     image:
       // TODO: replace with real Shifa photography
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=80",
   },
   {
     slug: "dr-sara-naveed",
@@ -182,7 +182,7 @@ export const doctors: Doctor[] = [
     lastReviewed: "2025-10-01",
     image:
       // TODO: replace with real Shifa photography
-      "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=900&q=80",
   },
   {
     slug: "dr-hina-ashraf",
@@ -205,7 +205,76 @@ export const doctors: Doctor[] = [
     lastReviewed: "2025-10-01",
     image:
       // TODO: replace with real Shifa photography
-      "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    slug: "dr-tariq-mahmood",
+    name: "Dr. Tariq Mahmood",
+    specialty: "Consultant Orthopedic Surgeon",
+    departmentSlug: "orthopedics",
+    experience: "20+ years",
+    qualifications: ["MBBS", "FCPS (Orthopedic Surgery)", "Fellowship in Joint Replacement (UK)"],
+    procedures: [
+      "Total knee replacement",
+      "Total hip replacement",
+      "Sports injury arthroscopy",
+      "Spinal decompression",
+    ],
+    availability: "Mon, Tue, Thu, 10:00 AM to 3:00 PM",
+    summary:
+      "Dr. Tariq Mahmood is one of Pakistan's most experienced joint replacement surgeons, with over 3,500 knee and hip replacement procedures performed at Shifa International Hospitals.",
+    bio: "Dr. Tariq Mahmood is a Consultant Orthopedic Surgeon at Shifa International Hospitals with 20 years of specialist experience in joint replacement, sports injury surgery, and spinal procedures. He completed his FCPS in Orthopedic Surgery and pursued a Fellowship in Joint Replacement at a UK teaching hospital. Dr. Mahmood has performed over 3,500 total knee and hip replacement surgeries and leads Shifa's Joint Replacement Centre. He has trained numerous orthopedic residents and is known for his precise surgical technique and structured post-operative rehabilitation protocols. He consults patients from across Pakistan and internationally referred cases.",
+    languages: ["English", "Urdu", "Punjabi"],
+    lastReviewed: "2025-10-01",
+    image:
+      // TODO: replace with real Shifa photography
+      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    slug: "dr-farrukh-khan",
+    name: "Dr. Farrukh Khan",
+    specialty: "Consultant Neurologist & Stroke Specialist",
+    departmentSlug: "neurology",
+    experience: "16+ years",
+    qualifications: ["MBBS", "FCPS (Neurology)", "MRCP (UK)", "Stroke Medicine Fellowship"],
+    procedures: [
+      "Stroke thrombolysis",
+      "EEG and epilepsy monitoring",
+      "Botulinum toxin for migraine",
+      "Multiple sclerosis management",
+    ],
+    availability: "Mon to Wed, Fri, 9:00 AM to 2:00 PM",
+    summary:
+      "Dr. Farrukh Khan is a dual-trained UK and Pakistan neurologist specialising in acute stroke management, epilepsy, and complex neurological disorders at Shifa International Hospitals.",
+    bio: "Dr. Farrukh Khan is a Consultant Neurologist and Stroke Specialist with 16 years of clinical experience across the UK and Pakistan. He holds FCPS in Neurology, MRCP (UK), and completed a dedicated Stroke Medicine Fellowship. Dr. Khan served as a Specialty Registrar in the UK National Health Service before returning to Pakistan to lead the Shifa Stroke Programme. He is trained in stroke thrombolysis, acute stroke unit management, and neuro-rehabilitation protocols. He runs specialist clinics for epilepsy, Parkinson's disease, multiple sclerosis, and botulinum toxin for chronic migraine.",
+    languages: ["English", "Urdu"],
+    lastReviewed: "2025-10-01",
+    image:
+      // TODO: replace with real Shifa photography
+      "https://images.unsplash.com/photo-1637059824899-a441006a6875?auto=format&fit=crop&w=900&q=80",
+  },
+  {
+    slug: "dr-rabia-siddiqui",
+    name: "Dr. Rabia Siddiqui",
+    specialty: "Consultant Gynaecologist & Obstetrician",
+    departmentSlug: "obstetrics",
+    experience: "13+ years",
+    qualifications: ["MBBS", "FCPS (Obstetrics & Gynaecology)", "Diploma in Laparoscopic Surgery"],
+    procedures: [
+      "High-risk pregnancy management",
+      "Laparoscopic gynaecological surgery",
+      "Hysteroscopy and polypectomy",
+      "Antenatal and postnatal care",
+    ],
+    availability: "Tue to Sat, 10:00 AM to 3:00 PM",
+    summary:
+      "Dr. Rabia Siddiqui provides specialist obstetric and gynaecological care including high-risk pregnancy management, minimally invasive surgery, and comprehensive women's health services.",
+    bio: "Dr. Rabia Siddiqui is a Consultant Gynaecologist and Obstetrician at Shifa International Hospitals with 13 years of specialist clinical experience. She holds FCPS in Obstetrics and Gynaecology and a Diploma in Laparoscopic Surgery. Dr. Siddiqui manages high-risk pregnancies including gestational diabetes, preterm labour, and hypertensive disorders of pregnancy. She is trained in operative hysteroscopy, laparoscopic myomectomy, and endometriosis surgery. She provides comprehensive antenatal, intrapartum, and postnatal care with a focus on patient-centred decision-making and safe surgical outcomes.",
+    languages: ["English", "Urdu"],
+    lastReviewed: "2025-10-01",
+    image:
+      // TODO: replace with real Shifa photography
+      "https://images.unsplash.com/photo-1638202993928-7267aad84c31?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
