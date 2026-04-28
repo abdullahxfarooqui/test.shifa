@@ -19,6 +19,9 @@ export type Doctor = {
   procedures: string[];
   availability: string;
   summary: string;
+  bio: string;
+  languages: string[];
+  lastReviewed: string;
   image: string;
 };
 
@@ -121,7 +124,11 @@ export const doctors: Doctor[] = [
     availability: "Mon to Fri, 10:00 AM to 3:00 PM",
     summary:
       "Dr. Ayesha Khan leads systemic cancer treatment planning with a focus on evidence-based outcomes, safety monitoring, and compassionate patient counseling.",
+    bio: "Dr. Ayesha Khan is a Consultant Medical Oncologist at Shifa International Hospitals with over 15 years of clinical experience in systemic cancer therapy. She completed her FCPS in Oncology and pursued a Fellowship in Medical Oncology with subspecialty training in breast and gastrointestinal malignancies. Dr. Khan has been a core member of Shifa's multidisciplinary Tumor Board since 2012 and has supervised more than 3,000 chemotherapy and targeted therapy protocols. Her clinical interests include personalised treatment planning, immunotherapy assessment, and survivorship care. She is committed to informed patient decision-making and integrates psycho-oncology support throughout treatment.",
+    languages: ["English", "Urdu"],
+    lastReviewed: "2025-10-01",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80",
   },
   {
@@ -140,7 +147,11 @@ export const doctors: Doctor[] = [
     availability: "Mon, Wed, Fri, 9:00 AM to 2:00 PM",
     summary:
       "Dr. Umer Farooq provides advanced heart care through minimally invasive interventions and long-term prevention pathways.",
+    bio: "Dr. Umer Farooq is a Consultant Interventional Cardiologist with 18 years of specialist experience at Shifa International Hospitals. He is a Fellow of the American College of Cardiology (FACC) and holds FCPS in Cardiology from CPSP Pakistan. Dr. Farooq has performed over 5,000 coronary angiography and primary PCI procedures and leads the hospital's Heart Failure Clinic. He provides structured cardiovascular risk prevention services and has trained numerous cardiology residents and fellows. His practice focuses on minimally invasive interventions, outcomes monitoring, and patient-centred long-term prevention strategies.",
+    languages: ["English", "Urdu", "Punjabi"],
+    lastReviewed: "2025-10-01",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=80",
   },
   {
@@ -159,7 +170,11 @@ export const doctors: Doctor[] = [
     availability: "Tue to Sat, 11:00 AM to 4:00 PM",
     summary:
       "Dr. Sara Naveed focuses on timely neurological diagnosis and long-term management of complex brain and nerve disorders.",
+    bio: "Dr. Sara Naveed is a Consultant Neurologist at Shifa International Hospitals with 12 years of clinical experience in neurology and stroke medicine. She completed her FCPS in Neurology and a dedicated Stroke Fellowship, gaining subspecialty expertise in acute stroke pathways, epilepsy, and neurodegenerative disorders. Dr. Naveed co-leads the Shifa Stroke Unit and has contributed to multidisciplinary protocols that reduced average thrombolysis door-to-needle times at the hospital. She provides electrodiagnostic assessments and runs specialist clinics for Parkinson's disease and multiple sclerosis. She is recognised for her patient communication approach and systematic diagnostic frameworks.",
+    languages: ["English", "Urdu"],
+    lastReviewed: "2025-10-01",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=900&q=80",
   },
   {
@@ -178,7 +193,11 @@ export const doctors: Doctor[] = [
     availability: "Mon to Thu, 12:00 PM to 5:00 PM",
     summary:
       "Dr. Hina Ashraf provides specialist endocrine care focused on diabetes control, complication prevention, and sustainable long-term outcomes.",
+    bio: "Dr. Hina Ashraf is a Consultant Endocrinologist with 14 years of specialist experience managing diabetes, thyroid disease, and complex metabolic disorders. She holds FCPS in Medicine and completed a Fellowship in Endocrinology with subspecialty focus on insulin therapy optimisation and diabetic complications. Dr. Ashraf leads Shifa's Diabetes Education Programme and supervises the hospital's complication screening clinics covering nephropathy, neuropathy, and diabetic eye disease. She has contributed to clinical guidelines on insulin protocol standardisation and is actively involved in postgraduate teaching. Her practice integrates medical management with structured patient education and long-term monitoring.",
+    languages: ["English", "Urdu"],
+    lastReviewed: "2025-10-01",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?auto=format&fit=crop&w=900&q=80",
   },
 ];

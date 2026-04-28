@@ -4,8 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { conditions, doctors, getDoctorBySlug, getSpecialtyBySlug } from "@/lib/medical-data";
-import type { PhysicianSchema } from "@/lib/schema-types";
-import { stringifySchema } from "@/lib/schema-types";
+import { PhysicianSchema } from "@/components/schema/PhysicianSchema";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 
@@ -64,23 +63,6 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
   const specialty = getSpecialtyBySlug(item.departmentSlug);
   const relatedConditions = conditions.filter((condition) => condition.relatedDoctorSlugs.includes(item.slug));
 
-  const physicianSchema: PhysicianSchema = {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    name: item.name,
-    medicalSpecialty: item.specialty,
-    worksFor: {
-      "@type": "Hospital",
-      name: "Shifa International Hospitals",
-    },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Islamabad",
-      addressCountry: "PK",
-    },
-    url: `https://www.shifa.com.pk/doctors/${item.slug}`,
-  };
-
   const crumbs = [
     { name: "Home", href: "/" },
     { name: "Doctors", href: "/doctors" },
@@ -89,26 +71,23 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
 
   return (
     <main className="bg-[var(--brand-bg)] pb-20">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: stringifySchema(physicianSchema) }}
-      />
+      <PhysicianSchema doctor={item} />
       <BreadcrumbSchema crumbs={crumbs} />
 
       <section className="mx-auto max-w-[1080px] px-4 pt-10 lg:px-6">
         <Breadcrumb crumbs={crumbs} />
       </section>
 
+      {/* Hero */}
       <section className="mx-auto max-w-[1080px] px-4 pt-6 lg:px-6">
         <div className="grid gap-6 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-35px_rgba(2,6,23,0.62)] md:grid-cols-[320px_1fr]">
           <div className="relative h-[320px] overflow-hidden rounded-2xl border border-slate-200">
-            <Image src={item.image} alt={item.name} fill className="object-cover" />
+            <Image src={item.image} alt={item.name} fill className="object-cover" priority />
           </div>
           <div>
             <h1 className="text-4xl font-bold">{item.name}</h1>
             <p className="mt-2 text-lg font-semibold text-[#0B5FA5]">{item.specialty}</p>
-            <p className="mt-4 text-sm leading-relaxed text-[var(--text-muted)]">{item.summary}</p>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            <div className="mt-3 grid gap-3 sm:grid-cols-3">
               <div className="rounded-xl border border-slate-200 bg-[#f8fbff] p-3">
                 <p className="text-xs font-semibold uppercase tracking-wide text-[var(--text-muted)]">Experience</p>
                 <p className="mt-1 font-semibold">{item.experience}</p>
@@ -116,6 +95,10 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
               <div className="rounded-xl border border-slate-200 bg-[#f8fbff] p-3">
                 <p className="text-xs font-semibold uppercase tracking-wide text-[var(--text-muted)]">Availability</p>
                 <p className="mt-1 font-semibold">{item.availability}</p>
+              </div>
+              <div className="rounded-xl border border-slate-200 bg-[#f8fbff] p-3">
+                <p className="text-xs font-semibold uppercase tracking-wide text-[var(--text-muted)]">Languages</p>
+                <p className="mt-1 font-semibold">{item.languages.join(", ")}</p>
               </div>
             </div>
             <div className="mt-5 flex flex-wrap gap-3">
@@ -130,6 +113,18 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
         </div>
       </section>
 
+      {/* About */}
+      <section className="mx-auto mt-8 max-w-[1080px] px-4 lg:px-6">
+        <article className="rounded-2xl border border-slate-200 bg-white p-6">
+          <h2 className="text-2xl font-bold">About {item.name}</h2>
+          <p className="mt-4 text-sm leading-7 text-[var(--text-muted)] sm:text-base">{item.bio}</p>
+          <p className="mt-3 text-xs text-slate-400">
+            Last reviewed: <time dateTime={item.lastReviewed}>{new Date(item.lastReviewed).toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "numeric" })}</time>
+          </p>
+        </article>
+      </section>
+
+      {/* Qualifications & Procedures */}
       <section className="mx-auto mt-8 max-w-[1080px] px-4 lg:px-6">
         <div className="grid gap-5 md:grid-cols-2">
           <article className="rounded-2xl border border-slate-200 bg-white p-6">
@@ -151,6 +146,7 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
         </div>
       </section>
 
+      {/* Related care pathways */}
       <section className="mx-auto mt-8 max-w-[1080px] px-4 lg:px-6">
         <div className="rounded-2xl border border-slate-200 bg-white p-6">
           <h2 className="text-2xl font-bold">Related Care Pathways</h2>
@@ -186,6 +182,16 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Sticky mobile CTA */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-slate-200 bg-white p-3 md:hidden">
+        <Link
+          href="/book-appointment"
+          className="block w-full rounded-xl bg-[var(--brand-accent)] py-3 text-center text-sm font-semibold text-white"
+        >
+          Book Appointment
+        </Link>
+      </div>
     </main>
   );
 }
