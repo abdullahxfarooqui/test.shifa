@@ -66,11 +66,11 @@ export function HealthLibraryHub() {
       {/* Hero banner */}
       <div className="bg-gradient-to-br from-[#07203b] to-[#0b5fa5] px-4 py-16 text-center sm:px-6 lg:px-8">
         <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-blue-200">
-          Shifa Health Library
+          Health Library
         </p>
-        <h1 className="text-4xl font-black text-white sm:text-5xl">Your Guide to Better Health</h1>
+        <h1 className="text-4xl font-black text-white sm:text-5xl">Health Articles & Guides</h1>
         <p className="mx-auto mt-3 max-w-2xl text-lg text-blue-100">
-          Evidence-based health information from Shifa's clinical specialists — in plain language.
+          Medical information from Shifa's specialist team — articles, guides, and tools in one place.
         </p>
         {/* Search */}
         <div className="mx-auto mt-8 max-w-xl">
@@ -204,8 +204,7 @@ export function HealthLibraryHub() {
 
         {/* CTA bar */}
         <div className="mt-14 rounded-2xl bg-gradient-to-r from-[#07203b] to-[#0b5fa5] px-8 py-10 text-center">
-          <h2 className="text-2xl font-bold text-white">Browse More Health Resources</h2>
-          <p className="mt-2 text-blue-100">In-depth patient guides, doctor interviews, and health calculators</p>
+          <h2 className="text-2xl font-bold text-white">More Health Resources</h2>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <Link href="/health-library/patient-guide" className="rounded-full bg-white px-6 py-2.5 text-sm font-semibold text-[#0b5fa5] hover:bg-blue-50">
               Patient Guide A–Z

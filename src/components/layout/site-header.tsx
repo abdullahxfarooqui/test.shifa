@@ -90,7 +90,7 @@ export function SiteHeader() {
           {/* Logo */}
           <Link
             href="/"
-            className="relative flex h-12 w-44 shrink-0 items-center overflow-hidden md:w-52"
+            className="flex shrink-0 items-center"
             aria-label="Shifa International Hospitals"
           >
             <Image
@@ -98,7 +98,7 @@ export function SiteHeader() {
               alt="Shifa International Hospitals"
               width={701}
               height={456}
-              className="h-auto w-[115%] max-w-none object-center"
+              className="h-12 w-auto object-contain md:h-14"
               priority
             />
           </Link>

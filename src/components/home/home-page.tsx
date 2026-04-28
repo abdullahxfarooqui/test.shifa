@@ -8,10 +8,10 @@ import { ArrowRight, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const keyActions = [
-  { label: "Find a Doctor", href: "/doctors/dr-ayesha-khan" },
-  { label: "Patient Reports", href: "/patient-portal" },
-  { label: "Executive Health Service", href: "/corporate" },
-  { label: "Health Calculators", href: "/health-library/calculators" },
+  { label: "Find a Doctor", href: "/doctors/dr-ayesha-khan", icon: "🩺" },
+  { label: "Patient Reports", href: "/patient-portal", icon: "📋" },
+  { label: "Executive Health", href: "/corporate", icon: "🏥" },
+  { label: "Health Calculators", href: "/health-library/calculators", icon: "🔢" },
 ];
 
 const islamabadPrograms = [
@@ -107,21 +107,21 @@ const islamabadPrograms = [
 ];
 
 const specialityLinks = [
-  { title: "Anesthesiology", href: "/specialities/anesthesiology/islamabad" },
-  { title: "Audiology", href: "/specialities/audiology/islamabad" },
-  { title: "Cardiology", href: "/specialities/cardiology/islamabad" },
-  { title: "Cardiac Surgery", href: "/specialities/cardiac-surgery/islamabad" },
-  { title: "Dentistry and Orthodontics", href: "/specialities/dentistry-and-orthodontics/islamabad" },
-  { title: "Dermatology", href: "/specialities/dermatology/islamabad" },
-  { title: "Emergency Medicine", href: "/specialities/emergency-medicine/islamabad" },
-  { title: "Endocrinology and Diabetes", href: "/specialities/endocrinology-and-diabetes/islamabad" },
-  { title: "ENT", href: "/specialities/ent/islamabad" },
-  { title: "Gastroenterology and Hepatology", href: "/specialities/gastroenterology-and-hepatology/islamabad" },
-  { title: "General Surgery", href: "/specialities/general-surgery/islamabad" },
-  { title: "Infectious Diseases", href: "/specialities/infectious-diseases/islamabad" },
-  { title: "Internal Medicine", href: "/specialities/internal-medicine/islamabad" },
-  { title: "Nephrology", href: "/specialities/nephrology/islamabad" },
-  { title: "Neurology", href: "/specialities/neurology/islamabad" },
+  { title: "Anesthesiology", href: "/specialities/anesthesiology/islamabad", icon: "💉" },
+  { title: "Audiology", href: "/specialities/audiology/islamabad", icon: "👂" },
+  { title: "Cardiology", href: "/specialities/cardiology/islamabad", icon: "❤️" },
+  { title: "Cardiac Surgery", href: "/specialities/cardiac-surgery/islamabad", icon: "🫀" },
+  { title: "Dentistry & Orthodontics", href: "/specialities/dentistry-and-orthodontics/islamabad", icon: "🦷" },
+  { title: "Dermatology", href: "/specialities/dermatology/islamabad", icon: "🧴" },
+  { title: "Emergency Medicine", href: "/specialities/emergency-medicine/islamabad", icon: "🚨" },
+  { title: "Endocrinology & Diabetes", href: "/specialities/endocrinology-and-diabetes/islamabad", icon: "🩸" },
+  { title: "ENT", href: "/specialities/ent/islamabad", icon: "👃" },
+  { title: "Gastroenterology", href: "/specialities/gastroenterology-and-hepatology/islamabad", icon: "🫁" },
+  { title: "General Surgery", href: "/specialities/general-surgery/islamabad", icon: "🔬" },
+  { title: "Infectious Diseases", href: "/specialities/infectious-diseases/islamabad", icon: "🦠" },
+  { title: "Internal Medicine", href: "/specialities/internal-medicine/islamabad", icon: "🩺" },
+  { title: "Nephrology", href: "/specialities/nephrology/islamabad", icon: "🫘" },
+  { title: "Neurology", href: "/specialities/neurology/islamabad", icon: "🧠" },
 ];
 
 const stats = [
@@ -242,15 +242,19 @@ export function HomePage() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="rounded-2xl border border-white/20 bg-white/10 px-3 py-3 text-sm font-semibold text-white transition hover:bg-white/20"
+                  className="flex items-center gap-2.5 rounded-2xl border border-white/20 bg-white/10 px-3 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/20"
                 >
+                  <span className="text-base">{item.icon}</span>
                   {item.label}
                 </Link>
               ))}
             </div>
-            <div className="mt-4 rounded-2xl bg-white/15 p-4 text-sm text-blue-100">
-              <p className="font-semibold text-white">Medical Emergency?</p>
-              <p className="mt-1">Call 051-846-4646 for ambulance and emergency support.</p>
+            <div className="mt-4 flex items-start gap-3 rounded-2xl bg-[#e53935]/20 p-4 text-sm text-blue-100">
+              <span className="text-xl">🚑</span>
+              <div>
+                <p className="font-semibold text-white">Medical Emergency?</p>
+                <p className="mt-0.5">Call 051-846-4646 for ambulance and emergency support.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -371,9 +375,10 @@ export function HomePage() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="group rounded-2xl border border-slate-200 bg-[#fcfdff] p-4 transition hover:-translate-y-0.5 hover:border-[#0b5fa5]"
+                className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-[#fcfdff] p-4 transition hover:-translate-y-1 hover:border-[#0b5fa5] hover:bg-[#eaf4ff] hover:shadow-md"
               >
-                <p className="text-lg font-bold text-slate-900 group-hover:text-[#0b5fa5]">{item.title}</p>
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#eaf4ff] text-xl group-hover:bg-white">{item.icon}</span>
+                <p className="text-sm font-bold text-slate-900 group-hover:text-[#0b5fa5]">{item.title}</p>
               </Link>
             ))}
           </div>
@@ -388,9 +393,10 @@ export function HomePage() {
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((item) => (
-              <div key={item.label} className="rounded-2xl border border-slate-200 bg-[#f8fbff] p-4">
-                <p className="text-3xl font-black text-[#0b5fa5]">{item.value}</p>
-                <p className="mt-1 text-sm font-semibold text-slate-700">{item.label}</p>
+              <div key={item.label} className="relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-[#eaf4ff] to-white p-5">
+                <div className="absolute right-3 top-3 h-12 w-12 rounded-full bg-[#0b5fa5]/5" />
+                <p className="text-4xl font-black text-[#0b5fa5]">{item.value}</p>
+                <p className="mt-1 text-sm font-semibold text-slate-600">{item.label}</p>
               </div>
             ))}
           </div>
