@@ -26,7 +26,8 @@
       "Bash(node_modules/.bin/tsc --noEmit)",
       "Bash(~/.nvm/versions/node/v20.20.2/bin/node node_modules/.bin/tsc --noEmit)",
       "Bash(git checkout *)",
-      "Bash(git merge *)"
+      "Bash(git merge *)",
+      "Bash(git commit *)"
     ]
   }
 }

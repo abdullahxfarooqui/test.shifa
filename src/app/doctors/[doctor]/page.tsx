@@ -6,6 +6,8 @@ import { notFound } from "next/navigation";
 import { conditions, doctors, getDoctorBySlug, getSpecialtyBySlug } from "@/lib/medical-data";
 import type { PhysicianSchema } from "@/lib/schema-types";
 import { stringifySchema } from "@/lib/schema-types";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 
 type DoctorPageProps = {
   params: Promise<{
@@ -79,14 +81,25 @@ export default async function DoctorPage({ params }: DoctorPageProps) {
     url: `https://www.shifa.com.pk/doctors/${item.slug}`,
   };
 
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: "Doctors", href: "/doctors" },
+    { name: item.name, href: `/doctors/${item.slug}` },
+  ];
+
   return (
     <main className="bg-[var(--brand-bg)] pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: stringifySchema(physicianSchema) }}
       />
+      <BreadcrumbSchema crumbs={crumbs} />
 
-      <section className="mx-auto max-w-[1080px] px-4 pt-16 lg:px-6">
+      <section className="mx-auto max-w-[1080px] px-4 pt-10 lg:px-6">
+        <Breadcrumb crumbs={crumbs} />
+      </section>
+
+      <section className="mx-auto max-w-[1080px] px-4 pt-6 lg:px-6">
         <div className="grid gap-6 rounded-3xl bg-white p-6 shadow-[0_20px_50px_-35px_rgba(2,6,23,0.62)] md:grid-cols-[320px_1fr]">
           <div className="relative h-[320px] overflow-hidden rounded-2xl border border-slate-200">
             <Image src={item.image} alt={item.name} fill className="object-cover" />

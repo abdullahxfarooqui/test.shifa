@@ -276,6 +276,16 @@ export default async function SpecialtyIslamabadPage({ params }: PageProps) {
       />
 
       <HeroSection name={data.name} tagline={data.tagline} stats={data.heroStats} />
+      <div className="mx-auto max-w-7xl px-4 pt-4 sm:px-6">
+        {/* visual breadcrumb — schema breadcrumb lives in structuredData @graph above */}
+        <nav aria-label="breadcrumb">
+          <ol className="flex flex-wrap items-center gap-1 text-sm text-slate-500">
+            <li><a href="/" className="hover:text-[#0B5FA5]">Home</a></li>
+            <li className="flex items-center gap-1"><span className="text-slate-300" aria-hidden="true">/</span><a href="/specialities" className="hover:text-[#0B5FA5]">Specialities</a></li>
+            <li className="flex items-center gap-1"><span className="text-slate-300" aria-hidden="true">/</span><span className="font-medium text-slate-800" aria-current="page">{data.name}</span></li>
+          </ol>
+        </nav>
+      </div>
 
       <StickySectionNav
         items={[

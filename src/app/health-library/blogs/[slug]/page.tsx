@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { BlogDetailClient } from "@/components/blog/BlogDetailClient";
 import { articleEnhancements } from "@/data/article-enhancements";
 import { healthArticles } from "@/data/health-articles";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 
 export async function generateStaticParams() {
   return healthArticles.map((a) => ({ slug: a.slug }));
@@ -48,5 +50,20 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
     keyStats: [{ value: "Read", label: "This Article", description: "For health insights" }],
   };
 
-  return <BlogDetailClient article={article} enhancement={enhancement} />;
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: "Health Library", href: "/health-library" },
+    { name: "Blogs", href: "/health-library/blogs" },
+    { name: article.title, href: `/health-library/blogs/${slug}` },
+  ];
+
+  return (
+    <>
+      <BreadcrumbSchema crumbs={crumbs} />
+      <div className="mx-auto max-w-[980px] px-4 pt-6 lg:px-6">
+        <Breadcrumb crumbs={crumbs} />
+      </div>
+      <BlogDetailClient article={article} enhancement={enhancement} />
+    </>
+  );
 }

@@ -11,6 +11,8 @@ import {
 } from "@/lib/medical-data";
 import type { MedicalConditionSchema, FAQSchema } from "@/lib/schema-types";
 import { stringifySchema } from "@/lib/schema-types";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 
 type ConditionPageProps = {
   params: Promise<{
@@ -92,6 +94,12 @@ export default async function ConditionPage({ params }: ConditionPageProps) {
     })),
   };
 
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: "Conditions", href: "/conditions" },
+    { name: item.name, href: `/conditions/${item.slug}` },
+  ];
+
   return (
     <main className="bg-[var(--brand-bg)] pb-20">
       <script
@@ -102,9 +110,11 @@ export default async function ConditionPage({ params }: ConditionPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: stringifySchema(faqSchema) }}
       />
+      <BreadcrumbSchema crumbs={crumbs} />
 
-      <section className="mx-auto max-w-[980px] px-4 pt-16 lg:px-6">
-        <h1 className="text-balance text-4xl font-bold leading-tight text-[var(--text-dark)] sm:text-5xl">{item.name}</h1>
+      <section className="mx-auto max-w-[980px] px-4 pt-10 lg:px-6">
+        <Breadcrumb crumbs={crumbs} />
+        <h1 className="mt-4 text-balance text-4xl font-bold leading-tight text-[var(--text-dark)] sm:text-5xl">{item.name}</h1>
         <p className="mt-5 text-base leading-relaxed text-[var(--text-muted)]">{item.description}</p>
 
         <div className="mt-8 flex flex-wrap gap-2">

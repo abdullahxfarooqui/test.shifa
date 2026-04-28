@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { SectionWrapper } from "@/components/shared/SectionWrapper";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { BreadcrumbSchema } from "@/components/schema/BreadcrumbSchema";
 
 const guideContent: Record<string, { title: string; intro: string }> = {
   "dengue-fever": {
@@ -43,8 +45,19 @@ export default async function PatientGuideDetailPage({ params }: { params: Promi
 
   if (!item) notFound();
 
+  const crumbs = [
+    { name: "Home", href: "/" },
+    { name: "Health Library", href: "/health-library" },
+    { name: "Patient Guide", href: "/health-library/patient-guide" },
+    { name: item.title, href: `/health-library/patient-guide/${slug}` },
+  ];
+
   return (
     <main>
+      <BreadcrumbSchema crumbs={crumbs} />
+      <div className="mx-auto max-w-[980px] px-4 pt-6 lg:px-6">
+        <Breadcrumb crumbs={crumbs} />
+      </div>
       <SectionWrapper title={item.title} description={item.intro}>
         <div className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-600">
           This page is structured for CMS-backed patient guide content under the health library architecture.
