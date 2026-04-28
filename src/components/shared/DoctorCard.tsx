@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import type { DoctorRecord } from "@/types/shifa";
 import { Button } from "@/components/ui/button";
+import { DoctorAvatar } from "@/components/DoctorAvatar";
 
 type DoctorCardProps = {
   doctor: DoctorRecord;
@@ -12,7 +12,7 @@ export function DoctorCard({ doctor }: DoctorCardProps) {
   return (
     <article className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
       <div className="relative h-48 overflow-hidden rounded-xl">
-        <Image src={doctor.image} alt={doctor.name} fill className="object-cover" />
+        <DoctorAvatar src={doctor.image} name={doctor.name} />
       </div>
       <h3 className="mt-4 text-lg font-semibold text-slate-900">{doctor.name}</h3>
       <p className="text-sm font-medium text-[#0b5fa5]">{doctor.specialty}</p>
