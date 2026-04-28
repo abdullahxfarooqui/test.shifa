@@ -34,7 +34,7 @@ export default function SpecialitiesPage() {
         name: "What specialties are available at Shifa International Hospitals?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Shifa offers 45+ specialties, including oncology, cardiology, neurology, orthopedics, transplant services, and advanced diagnostics.",
+          text: "Shifa International Hospitals offers 45+ medical specialties across surgical, medical, diagnostic, and critical care disciplines. Key departments include Oncology, Cardiology, Neurology, Orthopedics, Transplant Services, Endocrinology, Nephrology, Gastroenterology, Pulmonology, and advanced Radiology and Imaging. Each specialty is led by FCPS and fellowship-trained consultants and supported by dedicated nursing, diagnostics, and rehabilitation teams operating from the main Islamabad campus.",
         },
       },
       {
@@ -42,7 +42,7 @@ export default function SpecialitiesPage() {
         name: "How to choose the right specialist?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Use symptom-based triage and doctor search filters by specialty and availability to connect with the right consultant.",
+          text: "Start by identifying your primary symptom — for example, chest pain directs you to Cardiology, joint problems to Orthopedics, and hormonal issues to Endocrinology. The Shifa website provides specialty descriptions, consultant profiles with qualifications and availability, and an online booking system. You can also call our helpline at 051-8464646 to speak with a patient services advisor who will guide you to the right department based on your clinical situation.",
         },
       },
       {
@@ -50,7 +50,7 @@ export default function SpecialitiesPage() {
         name: "Do you offer second opinions?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, specialist second-opinion consultations are available for treatment planning and complex diagnoses.",
+          text: "Yes. Shifa International Hospitals provides formal second-opinion consultations across all major specialties. Patients who have received a diagnosis or treatment recommendation elsewhere can request a review of their case, including pathology reports, imaging studies, and prior treatment records. Our consultants offer independent assessments to confirm, refine, or propose alternatives to the existing plan. Appointments can be booked online or by contacting the relevant specialty department directly through the patient services team.",
         },
       },
     ],

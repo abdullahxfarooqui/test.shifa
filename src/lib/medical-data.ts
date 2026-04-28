@@ -265,17 +265,17 @@ export const conditions: Condition[] = [
       {
         question: "What treatment options are available for breast cancer at Shifa?",
         answer:
-          "Shifa offers surgery, chemotherapy, hormone therapy, targeted therapy, radiotherapy, and supportive care through multidisciplinary planning.",
+          "Shifa International Hospitals offers a comprehensive breast cancer care pathway including lumpectomy and mastectomy, systemic chemotherapy, hormone receptor-targeted therapy, HER2-directed treatment, and precision radiotherapy. Each case is reviewed by a multidisciplinary Tumor Board comprising oncologists, breast surgeons, radiologists, and pathologists. Treatment decisions are personalised according to tumour stage, receptor status, age, and patient preferences, ensuring optimal outcomes with structured follow-up and survivorship support throughout.",
       },
       {
         question: "Can I get a second opinion for breast cancer treatment?",
         answer:
-          "Yes. Our oncology consultants provide second-opinion consultations with review of pathology, imaging, and treatment strategy.",
+          "Yes. Shifa's oncology team provides formal second-opinion consultations for patients diagnosed at other institutions. This service includes a review of all original pathology slides, imaging reports, and prior treatment records. Our consultants assess whether the current plan aligns with evidence-based guidelines and identify any available clinical options that may not have been considered. Appointments can be booked online or by calling our oncology helpline.",
       },
       {
         question: "Do you offer genetic counseling for hereditary risk?",
         answer:
-          "Yes, selected patients with family history or early-onset patterns can receive genetic counseling and risk assessment.",
+          "Yes. Shifa provides genetic counseling for patients with a strong family history of breast or ovarian cancer, early-onset disease, or bilateral malignancy patterns. A structured risk assessment helps determine whether BRCA1, BRCA2, or other hereditary gene testing is appropriate. Results guide long-term surveillance schedules, preventive strategies, and decisions about prophylactic interventions, supporting both the patient and at-risk family members in understanding their individual risk profiles.",
       },
     ],
   },
@@ -341,17 +341,17 @@ export const conditions: Condition[] = [
       {
         question: "What should I do if I suspect a heart attack?",
         answer:
-          "Call emergency services immediately and seek urgent hospital care. Do not delay treatment while waiting for symptoms to settle.",
+          "Call emergency services immediately — do not drive yourself to hospital. While waiting, sit or lie down and avoid exertion. Shifa International Hospitals operates a 24-hour Emergency Department with a dedicated cardiac response team. Once you arrive, our team initiates ECG, biomarker testing, and clinical triage within minutes. Early presentation significantly improves outcomes, so please do not wait for symptoms to resolve on their own. Time lost is heart muscle lost.",
       },
       {
         question: "Can heart attack symptoms occur without severe chest pain?",
         answer:
-          "Yes. Some patients, especially women and people with diabetes, may have atypical symptoms such as fatigue, nausea, or breathlessness.",
+          "Yes, atypical presentations are common, particularly in women, older adults, and people living with diabetes. These patients may experience unusual fatigue, unexplained breathlessness, jaw or shoulder discomfort, nausea, cold sweating, or a general sense of being unwell without prominent chest pain. Because these symptoms are easily attributed to other causes, cardiac emergencies are sometimes delayed in these groups. Any persistent or concerning symptom should prompt immediate medical evaluation rather than waiting.",
       },
       {
         question: "Do you provide rehabilitation after emergency treatment?",
         answer:
-          "Yes, Shifa offers post-event follow-up and cardiac rehabilitation planning to support safe long-term recovery.",
+          "Yes. Shifa offers structured post-cardiac-event care that includes serial cardiology follow-up, medication optimisation, blood pressure and lipid monitoring, dietary counselling, and a supervised exercise rehabilitation programme. Patients are reviewed at defined intervals after discharge to monitor recovery, detect early complications, and reduce the risk of a second event. Our cardiac rehabilitation pathway is designed to help patients return safely to daily activities and long-term health management.",
       },
     ],
   },
@@ -417,17 +417,17 @@ export const conditions: Condition[] = [
       {
         question: "Can diabetes be managed without insulin?",
         answer:
-          "Many type 2 patients can begin with lifestyle changes and oral medicines, but treatment should be individualized and reviewed regularly.",
+          "Many people with type 2 diabetes can achieve good control through a combination of lifestyle changes and oral antidiabetic medications, without requiring insulin at the outset. However, the right treatment plan depends on the individual's HbA1c level, duration of disease, kidney function, and other health factors. At Shifa, our endocrinologists review each patient's clinical profile and adjust therapy over time. Some patients eventually require insulin as the disease progresses, which is normal and does not represent a treatment failure.",
       },
       {
         question: "How often should HbA1c be checked?",
         answer:
-          "Most patients benefit from testing every three months until targets stabilize, then at intervals advised by the treating specialist.",
+          "For most patients with diabetes, HbA1c should be checked every three months until blood sugar targets are consistently met, then every six months if stable. Patients on new medications, those experiencing frequent hypoglycaemia, or those with poor control may need more frequent monitoring. At Shifa, we integrate HbA1c tracking with kidney function, blood pressure, and lipid testing to provide a complete picture of metabolic health at each visit, adjusting the management plan accordingly.",
       },
       {
         question: "Do you screen for diabetes complications?",
         answer:
-          "Yes, Shifa provides kidney, eye, nerve, and cardiovascular risk screening as part of integrated diabetes follow-up.",
+          "Yes. Shifa offers annual complication screening as part of integrated diabetes follow-up, including urine microalbumin and creatinine for early kidney disease, dilated retinal examination for diabetic eye disease, neurological assessment for peripheral neuropathy, and cardiovascular risk scoring for heart disease prevention. These screenings are recommended even when blood sugar appears well controlled, because complications can develop silently. Early detection allows timely intervention to slow or prevent progression across all major organ systems.",
       },
     ],
   },
