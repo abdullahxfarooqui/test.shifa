@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     locale: "en_PK",
     images: [
       {
+        // TODO: replace with real Shifa photography
         url: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1800&q=80",
         width: 1800,
         height: 1000,
@@ -44,6 +45,7 @@ export const metadata: Metadata = {
     title: "Oncology | Shifa International Hospitals – Cancer Care in Islamabad",
     description,
     images: [
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1800&q=80",
     ],
   },

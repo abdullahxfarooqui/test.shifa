@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     siteName: "Shifa International Hospitals",
     images: [
       {
+        // TODO: replace with real Shifa photography
         url: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1800&q=80",
         width: 1800,
         height: 1000,
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
     title: "Shifa International Hospitals | Healthcare in Pakistan",
     description,
     images: [
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1800&q=80",
     ],
   },

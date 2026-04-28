@@ -63,6 +63,7 @@ const facilities = [
     title: "Smart Infusion Suites",
     text: "Private chemotherapy bays with real-time safety monitoring and calm patient-first design.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&fm=webp&w=1300&q=80",
     alt: "South Asian oncology care team in a monitored chemotherapy setting",
     bento: "md:col-span-3 md:row-span-2",
@@ -72,6 +73,7 @@ const facilities = [
     title: "Radiation Oncology",
     text: "Precision planning and quality-controlled radiotherapy workflows.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&fm=webp&w=1300&q=80",
     alt: "Radiation oncology treatment room in Pakistan with modern linear accelerator",
     bento: "md:col-span-3",
@@ -81,6 +83,7 @@ const facilities = [
     title: "Inpatient Oncology",
     text: "Infection-aware inpatient rooms with integrated symptom support.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&fm=webp&w=1300&q=80",
     alt: "Premium oncology inpatient room in a Pakistan tertiary care hospital",
     bento: "md:col-span-2",
@@ -90,6 +93,7 @@ const facilities = [
     title: "Surgical Complex",
     text: "Dedicated oncology operating and perioperative pathways.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?auto=format&fit=crop&fm=webp&w=1300&q=80",
     alt: "South Asian surgical oncology team preparing coordinated treatment",
     bento: "md:col-span-2",
@@ -99,6 +103,7 @@ const facilities = [
     title: "Imaging & Staging",
     text: "Integrated PET-CT and MRI for treatment planning and follow-up.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&fm=webp&w=1300&q=80",
     alt: "Hospital diagnostic imaging room in Pakistan with PET-CT scanner",
     bento: "md:col-span-2",
@@ -113,6 +118,7 @@ const diagnostics = [
     title: "PET-CT and MRI Staging",
     text: "High-resolution staging for accurate baseline and response monitoring.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "PET-CT scanner used for oncology staging and monitoring",
     category: "Imaging" satisfies DiagnosticCategory,
@@ -122,6 +128,7 @@ const diagnostics = [
     title: "Histopathology and IHC",
     text: "Subtype-level tissue diagnostics supporting evidence-based selection.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "Pathology microscope and slides for tumor tissue analysis",
     category: "Lab" satisfies DiagnosticCategory,
@@ -131,6 +138,7 @@ const diagnostics = [
     title: "Molecular Biomarker Testing",
     text: "Biomarker profiling to personalize targeted and systemic treatment pathways.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "Molecular diagnostics lab for oncology biomarker testing",
     category: "Lab" satisfies DiagnosticCategory,
@@ -140,6 +148,7 @@ const diagnostics = [
     title: "Genetic Risk Counseling",
     text: "Family-level hereditary risk evaluation with prevention guidance.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "Genetic counseling consultation for hereditary cancer risk",
     category: "Genetic" satisfies DiagnosticCategory,
@@ -149,6 +158,7 @@ const diagnostics = [
     title: "Preventive Screening Clinics",
     text: "Structured early detection clinics with streamlined referral pathways.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "South Asian preventive cancer screening consultation in outpatient clinic",
     category: "Screening" as DiagnosticCategory,
@@ -162,6 +172,7 @@ const treatments = [
     subtitle: "Systemic and precision-led therapies",
     text: "Chemotherapy, immunotherapy, and targeted regimens are selected based on tumor biology, staging, and patient context.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&fm=webp&w=1400&q=80",
     alt: "South Asian oncology doctor discussing personalized systemic therapy",
   },
@@ -171,6 +182,7 @@ const treatments = [
     subtitle: "Controlled precision and tissue protection",
     text: "Image-guided radiotherapy protocols prioritize control, safety, and quality-of-life preservation.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&fm=webp&w=1400&q=80",
     alt: "Radiation oncology specialist planning precise radiotherapy delivery",
   },
@@ -180,6 +192,7 @@ const treatments = [
     subtitle: "Coordinated perioperative pathways",
     text: "Surgical planning, ICU readiness, pain management, and rehabilitation are integrated for seamless recovery.",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?auto=format&fit=crop&fm=webp&w=1400&q=80",
     alt: "Surgical oncology team coordinating treatment and recovery planning",
   },
@@ -243,6 +256,7 @@ const doctors = [
     name: "Dr. Ayesha Khan",
     specialty: "Consultant Medical Oncologist",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&fm=webp&w=900&q=80",
     alt: "Portrait of consultant medical oncologist in Shifa Oncology team",
   },
@@ -250,6 +264,7 @@ const doctors = [
     name: "Dr. Umar Siddiqui",
     specialty: "Consultant Radiation Oncologist",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&fm=webp&w=900&q=80",
     alt: "Portrait of consultant radiation oncologist in hospital setting",
   },
@@ -257,6 +272,7 @@ const doctors = [
     name: "Dr. Maryam Ali",
     specialty: "Consultant Surgical Oncologist",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&fm=webp&w=900&q=80",
     alt: "Portrait of consultant surgical oncologist from multidisciplinary team",
   },
@@ -267,6 +283,7 @@ const testimonials = [
     quote: "Diagnostics and treatment were coordinated with remarkable clarity. Every step felt confident and precise.",
     author: "Patient Family, Islamabad",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "Oncology doctor consulting patient family in private room",
   },
@@ -274,6 +291,7 @@ const testimonials = [
     quote: "The nursing care was deeply compassionate and consistently structured throughout our treatment cycle.",
     author: "Caregiver, Faisalabad",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "Nurse supporting oncology patient during treatment session",
   },
@@ -281,6 +299,7 @@ const testimonials = [
     quote: "Our second opinion consultation gave us a clear roadmap and restored confidence immediately.",
     author: "International Patient",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&fm=webp&w=1200&q=80",
     alt: "Multidisciplinary oncology team reviewing records during case conference",
   },
@@ -364,6 +383,7 @@ export function OncologyPage() {
       <main className="bg-white text-[#0F172A]">
         <section className="relative isolate overflow-hidden">
           <Image
+            // TODO: replace with real Shifa photography
             src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&fm=webp&w=2200&q=80"
             alt="Pakistani oncology team walking through a premium hospital oncology wing"
             fill
@@ -443,6 +463,7 @@ export function OncologyPage() {
               className="relative h-[420px] overflow-hidden rounded-2xl shadow-sm"
             >
               <Image
+                // TODO: replace with real Shifa photography
                 src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?auto=format&fit=crop&fm=webp&w=1400&q=80"
                 alt="Pakistani oncology consultant and patient discussing treatment in private clinical room"
                 fill
@@ -876,6 +897,7 @@ export function OncologyPage() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="relative overflow-hidden rounded-2xl shadow-sm">
               <Image
+                // TODO: replace with real Shifa photography
                 src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&fm=webp&w=2200&q=80"
                 alt="South Asian hospital care team guiding oncology patients in reception area"
                 fill

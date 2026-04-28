@@ -48,6 +48,7 @@ export function SpecialitiesPageView() {
     <main className="bg-[var(--brand-bg)] pb-20">
       <section className="relative isolate overflow-hidden">
         <Image
+          // TODO: replace with real Shifa photography
           src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=2200&q=80"
           alt="South Asian clinical team representing medical specialties at Shifa International Hospitals"
           fill

@@ -48,6 +48,7 @@ export const specialties: Specialty[] = [
     description: "Advanced heart care including angioplasty, cardiac surgery, and preventive cardiology.",
     category: "Medical",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1200&q=80",
     alt: "South Asian cardiology specialist consultation at Shifa International Hospital Islamabad",
   },
@@ -57,6 +58,7 @@ export const specialties: Specialty[] = [
     description: "Comprehensive cancer care with chemotherapy, radiotherapy, and surgical oncology.",
     category: "Medical",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80",
     alt: "South Asian oncology care team at Shifa International Hospital Islamabad",
   },
@@ -66,6 +68,7 @@ export const specialties: Specialty[] = [
     description: "Expert care for brain, spine, and nervous system disorders with modern neuro diagnostics.",
     category: "Medical",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=1200&q=80",
     alt: "South Asian neurology specialist services at Shifa International Hospital Islamabad",
   },
@@ -75,6 +78,7 @@ export const specialties: Specialty[] = [
     description: "Joint replacement, sports injury recovery, and trauma care with rehabilitation pathways.",
     category: "Surgical",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1666214280391-8ff5bd3c0bf0?auto=format&fit=crop&w=1200&q=80",
     alt: "Orthopedic and surgical care planning at Shifa International Hospital Islamabad",
   },
@@ -84,6 +88,7 @@ export const specialties: Specialty[] = [
     description: "Multidisciplinary transplant programs with coordinated pre and post transplant care.",
     category: "Critical Care",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?auto=format&fit=crop&w=1200&q=80",
     alt: "South Asian transplant consultation services at Shifa International Hospital Islamabad",
   },
@@ -93,6 +98,7 @@ export const specialties: Specialty[] = [
     description: "High-precision imaging including MRI, CT, PET-CT, and interventional radiology services.",
     category: "Diagnostic",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80",
     alt: "Advanced diagnostic imaging equipment at Shifa International Hospital Islamabad",
   },
@@ -102,6 +108,7 @@ export const specialties: Specialty[] = [
     description: "Specialist care for diabetes, thyroid disease, and metabolic disorders with long-term monitoring.",
     category: "Medical",
     image:
+      // TODO: replace with real Shifa photography
       "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?auto=format&fit=crop&w=1200&q=80",
     alt: "South Asian endocrinology and diabetes consultation at Shifa International Hospital Islamabad",
   },
