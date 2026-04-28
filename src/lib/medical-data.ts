@@ -136,7 +136,7 @@ export const doctors: Doctor[] = [
     lastReviewed: "2025-10-01",
     image:
       // TODO: replace with real Shifa photography
-      "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=80",
   },
   {
     slug: "dr-umer-farooq",

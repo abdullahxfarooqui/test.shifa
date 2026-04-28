@@ -220,7 +220,7 @@ export function HomePage() {
               Islamabad flagship campus
             </p>
             <h1 className="mt-4 text-4xl font-black leading-tight text-white sm:text-5xl lg:text-6xl">
-              Best Hospital in Islamabad — JCI-Accredited Quaternary Care
+              Expert Specialists. Compassionate Care.
             </h1>
             <p className="mt-4 max-w-2xl text-base text-blue-100 sm:text-lg">
               JCI Gold-accredited quaternary care with advanced centers in oncology, transplant, cardiac sciences, diagnostics, and emergency services.
