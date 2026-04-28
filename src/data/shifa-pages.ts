@@ -96,8 +96,8 @@ export const healthLibrarySections: PageCard[] = [
     id: "shifa-news",
     heading: "Shifa News",
     subheading: "Latest health updates, awareness campaigns, and hospital news.",
-    href: "https://shifanews.com",
-    external: true,
+    href: "/health-library",
+    external: false,
   },
   {
     id: "blogs",

@@ -21,7 +21,7 @@ export function parseRssFeed(xml: string): Article[] {
 
   return items.map((item, index) => {
     const title = stripCdata(item.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? "Untitled");
-    const link = item.match(/<link>([\s\S]*?)<\/link>/)?.[1]?.trim() ?? "https://shifanews.com";
+    const link = item.match(/<link>([\s\S]*?)<\/link>/)?.[1]?.trim() ?? "https://www.shifa.com.pk/health-library";
     const description = stripCdata(item.match(/<description>([\s\S]*?)<\/description>/)?.[1] ?? "");
     const pubDate = item.match(/<pubDate>([\s\S]*?)<\/pubDate>/)?.[1] ?? new Date().toUTCString();
     const categoryRaw = stripCdata(item.match(/<category>([\s\S]*?)<\/category>/)?.[1] ?? "general");
